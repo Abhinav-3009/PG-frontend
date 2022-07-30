@@ -1,4 +1,6 @@
 export interface SchApplication {
+    StudentId:number
+    InstituteId:number
     Religion:string
     Community:string
     Fathername:string
@@ -33,4 +35,5 @@ export interface SchApplication {
     District:string
     Address:string
     Pincode:number
+    ScholarshipId:number
 }
