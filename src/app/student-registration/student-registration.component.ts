@@ -9,6 +9,8 @@ import {
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IStudent } from '../istudent';
+import { StudentService } from '../Services/student.service';
 
 @Component({
   selector: 'app-student-registration',
@@ -16,88 +18,24 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./student-registration.component.css']
 })
 export class StudentRegistrationComponent implements OnInit {
-  City: any = [''];
-  Gender: any = [''];
+  studentdata:IStudent={name:'',dob:new Date(),gender:'',mobileNumber:'',email:'',instituteCode:0,aadhaar:'',accountNo:'',bankIFSC:'',bankName:'',password:''}
+  constructor(private studentservice:StudentService, private router:Router){}
 
-  registerForm: FormGroup = new FormGroup({});
-  submitted = false;
-  isValidForm = false;
+  saveStudent(student:IStudent)
+  {
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+    this.studentdata=student;
+    console.log(this.studentdata)
+    this.studentservice.addStudent(this.studentdata).subscribe(()=>
+    {
+      
+      alert("Registration successfull")
+      this.router.navigate(['/Home'])
+    })
+
+  }
+
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group(
-      {
-        firstName: ['', [Validators.required]],
-        district: ['', [Validators.required]],
-        domicile: ['', [Validators.required]],
-        mobile: [
-          '',
-          [
-            Validators.required,
-            Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$'),
-          ],
-        ],
-        email: ['', [Validators.required, Validators.email]],
-        instituteCode: ['', [Validators.required]],
-        aadharNumber: [
-          '',
-          [
-            Validators.required,
-            Validators.maxLength(12),
-            Validators.pattern('^[0-9]{12}$'),
-          ],
-        ],
-        ifscCode: ['', [Validators.required]],
-        accountNumber: [
-          '',
-          [
-            Validators.required,
-            Validators.maxLength(15),
-            Validators.pattern('^[0-9]{15}$'),
-          ],
-        ],
-        bankName: ['', [Validators.required]],
-        //setPassword: ['', [Validators.required, Validators.minLength(6)]],
-        //confirmPassword: ['', [Validators.required]],
-        agree: [false, [Validators.requiredTrue]],
-        gender: ['', [Validators.required]],
-        dob: ['', [Validators.required]],
-        password: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(6),
-            Validators.maxLength(10),
-          ],
-        ],
-        confirmPassword: ['', Validators.required],
-        //acceptTerms: [false, Validators.requiredTrue],
-      },
-      //{
-      //  validators: [Validators.match('password', 'confirmPassword')],
-      //}
-    );
-  }
-
-  get f(): { [key: string]: AbstractControl } {
-    return this.registerForm.controls;
-  }
-
-  onSubmit() {
-    this.submitted = true;
-    this.isValidForm = true;
-    if (this.registerForm.invalid) {
-      this.isValidForm = true;
-      return;
-    }
-    console.log(this.registerForm.value);
-    this.router.navigate(['/register-sucsess']);
-    this.reset();
-  }
-
-  reset() {
-    this.submitted = false;
-    this.isValidForm = false;
-    this.registerForm.reset();
+    
   }
 }

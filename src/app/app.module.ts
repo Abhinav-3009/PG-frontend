@@ -18,6 +18,10 @@ import { ScholarshipApplicationComponent } from './scholarship-application/schol
 import { InstituteStudentApplicationsComponent } from './institute-student-applications/institute-student-applications.component';
 
 
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +41,8 @@ import { InstituteStudentApplicationsComponent } from './institute-student-appli
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
