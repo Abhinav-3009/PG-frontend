@@ -1,67 +1,308 @@
-<form id="rendered-form" class="container">
+<h1>INSTITUTE REGISTRATION REQUEST FORM</h1>
+
+<form class="container" (ngSubmit)="saveInstitute(institutedata)" #instituteRegistrationForm="ngForm">
+
+    <!--
+  <div class="form-group row">
+    <label class="col-4 col-form-label" for="StateOfDomicile">State Of Domicile</label> 
+    <div class="col-8">
+      <input id="StateOfDomicile" name="StateOfDomicile" placeholder="State of Domicile" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="District" class="col-4 col-form-label">Disctrict</label> 
+    <div class="col-8">
+      <input id="District" name="District" placeholder="District" type="text" class="form-control" required="required">
+    </div>
+  </div>
+
+  -->
+    <div class="form-group row">
+        <label for="InstituteCategory" class="col-4 col-form-label">InstituteCategory</label>
+        <div class="col-8">
+            <input id="InstituteCategory" name="InstituteCategory" placeholder="Government or Private" type="text"
+                class="form-control" [(ngModel)]="institutedata.name" required #InstituteCategory="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Name" class="col-4 col-form-label">Name</label>
+        <div class="col-8">
+            <input id="Name" name="Name" placeholder="Elon Musk" type="text" class="form-control"
+                [(ngModel)]="institutedata.name" required #Name="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Institutecode" class="col-4 col-form-label">Institutecode</label>
+        <div class="col-8">
+            <input id="Institutecode" name="Institutecode" placeholder="1234" type="text" class="form-control"
+                [(ngModel)]="institutedata.Institutecode" required #Institutecode="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Disecode" class="col-4 col-form-label">Disecode</label>
+        <div class="col-8">
+            <input id="Disecode" name="Disecode" placeholder="1234" type="text" class="form-control"
+                [(ngModel)]="institutedata.Disecode" required #Disecode="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Disecode" class="col-4 col-form-label">Disecode</label>
+        <div class="col-8">
+            <input id="Disecode" name="Disecode" placeholder="1234" type="text" class="form-control"
+                [(ngModel)]="institutedata.Disecode" required #Disecode="ngModel">
+        </div>
+    </div>
+    <!--location to be added here-->
+    <div class="form-group row">
+        <label for="InstituteType" class="col-4 col-form-label">InstituteType</label>
+        <div class="col-8">
+            <input id="InstituteType" name="InstituteType" placeholder="College/ School/ University" type="text" class="form-control"
+                [(ngModel)]="institutedata.InstituteType" required #InstituteType="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="AffiliatedState" class="col-4 col-form-label">AffiliatedState</label>
+        <div class="col-8">
+            <input id="AffiliatedState" name="AffiliatedState" placeholder="Maharashtra" type="text" class="form-control"
+                [(ngModel)]="institutedata.AffiliatedState" required #AffiliatedState="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="AffiliatedState" class="col-4 col-form-label">AffiliatedState</label>
+        <div class="col-8">
+            <input id="AffiliatedState" name="AffiliatedState" placeholder="Maharashtra" type="text" class="form-control"
+                [(ngModel)]="institutedata.AffiliatedState" required #AffiliatedState="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="AffiliatedName" class="col-4 col-form-label">AffiliatedName</label>
+        <div class="col-8">
+            <input id="AffiliatedName" name="AffiliatedName" placeholder="Name of University" type="text" class="form-control"
+                [(ngModel)]="institutedata.AffiliatedName" required #AffiliatedName="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="AdmissionStartYear" class="col-4 col-form-label">AdmissionStartYear</label>
+        <div class="col-8">
+            <input id="AdmissionStartYear" name="AdmissionStartYear" placeholder="2000" type="text" class="form-control"
+                [(ngModel)]="institutedata.AdmissionStartYear" required #AdmissionStartYear="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Password" class="col-4 col-form-label">Password</label>
+        <div class="col-8">
+            <input id="Password" name="Password" placeholder="123@12" type="text" class="form-control"
+                [(ngModel)]="institutedata.Password" required #Password="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="ConfirmPassword" class="col-4 col-form-label">Confirm Password</label>
+        <div class="col-8">
+            <input id="ConfirmPassword" name="ConfirmPassword" placeholder="**********" type="text" class="form-control"
+                required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Address" class="col-4 col-form-label">Address</label>
+        <div class="col-8">
+            <input id="Address" name="Address" placeholder="complete address" type="text" class="form-control"
+                [(ngModel)]="institutedata.Address" required #Address="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Address" class="col-4 col-form-label">Address</label>
+        <div class="col-8">
+            <input id="Address" name="Address" placeholder="complete address" type="text" class="form-control"
+                [(ngModel)]="institutedata.Address" required #Address="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="City" class="col-4 col-form-label">City</label>
+        <div class="col-8">
+            <input id="City" name="City" placeholder="Mumbai" type="text" class="form-control"
+                [(ngModel)]="institutedata.City" required #City="ngModel">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="State" class="col-4 col-form-label">State</label>
+        <div class="col-8">
+            <input id="State" name="State" placeholder="Maharashtra" type="text" class="form-control"
+                [(ngModel)]="institutedata.State" required #State="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="District" class="col-4 col-form-label">District</label>
+        <div class="col-8">
+            <input id="District" name="Disctrict" placeholder="Disctrict" type="text" class="form-control"
+                [(ngModel)]="institutedata.Disctrict" required #District="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="Pincode" class="col-4 col-form-label">Pincode</label>
+        <div class="col-8">
+            <input id="Pincode" name="Pincode" placeholder="Pincode" type="text" class="form-control"
+                [(ngModel)]="institutedata.Pincode" required #Pincode="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="PrincipalName" class="col-4 col-form-label">PrincipalName</label>
+        <div class="col-8">
+            <input id="PrincipalName" name="PrincipalName" placeholder="PrincipalName" type="text" class="form-control"
+                [(ngModel)]="institutedata.PrincipalName" required #PrincipalName="ngModel">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="PrincipalNumber" class="col-4 col-form-label">PrincipalNumber</label>
+        <div class="col-8">
+            <input id="PrincipalNumber" name="PrincipalNumber" placeholder="PrincipalNumber" type="text" class="form-control"
+                [(ngModel)]="institutedata.PrincipalNumber" required #PrincipalNumber="ngModel">
+        </div>
+    </div>
+
+
+    <!-- <div class="form-group row">
+        <label class="col-4">Gender</label>
+        <div class="col-8">
+            <span class=" mgrt ,custom-control custom-radio custom-control-inline">
+                <input name="Gender" id="Gender_0" type="radio" class="custom-control-input" value="Male" required
+                    [(ngModel)]="studentdata.gender" #gender="ngModel">
+                <label for="Gender_0" class="custom-control-label">Male</label>
+            </span>
+            <span class="mgrt ,custom-control custom-radio custom-control-inline">
+                <input name="Gender" id="Gender_1" type="radio" class="custom-control-input" value="Female" required
+                    [(ngModel)]="studentdata.gender" #gender="ngModel">
+                <label for="Gender_1" class="custom-control-label">Female</label>
+            </span>
+            <span class="mgrt ,custom-control custom-radio custom-control-inline">
+                <input name="Gender" id="Gender_2" type="radio" class="custom-control-input" value="Other" required
+                    [(ngModel)]="studentdata.gender" #gender="ngModel">
+                <label for="Gender_2" class="custom-control-label">Other</label>
+            </span>
+        </div>
+    </div> -->
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1"> All the above Information furnished by me is true to the
+            best of my knowledge</label>
+    </div>
+
+    <div class="button-parent">
+        <div class="child form-group row">
+            <div class="offset-4 col-8">
+                <button name="Register" type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+
+        <div class="child form-group row">
+            <div class="offset-4 col-8">
+                <button name="reset" type="reset" class="btn btn-primary">Reset</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form id="rendered-form" class="container" [formGroup]="instituteRegisterForm">
   <div class="rendered-form">
     <div class="formbuilder-text form-group field-InstituteCategory"><label for="InstituteCategory"
-        class="formbuilder-text-label">InstituteCategory<span class="formbuilder-required">*</span></label><input
+        class="formbuilder-text-label">InstituteCategory<span class="formbuilder-required">*</span></label>
+        <input
         type="text" placeholder="InstituteCategory" class="form-control" name="InstituteCategory" id="InstituteCategory"
-        required="required" aria-required="true"></div>
+        required="required" aria-required="true" formControlName="InstituteCategory"></div>
     <div class="formbuilder-text form-group field-Name"><label for="Name" class="formbuilder-text-label">Name<span
           class="formbuilder-required">*</span></label><input type="text" placeholder="abc college" class="form-control"
-        name="Name" id="Name" required="required" aria-required="true"></div>
+        name="Name" id="Name" required="required" aria-required="true" formControlName="Name"></div>
     <div class="formbuilder-text form-group field-Institutecode"><label for="Institutecode"
         class="formbuilder-text-label">Institutecode<span class="formbuilder-required">*</span></label><input
         type="text" placeholder="12345" class="form-control" name="Institutecode" id="Institutecode" required="required"
-        aria-required="true"></div>
+        aria-required="true" formControlName="Institutecode"></div>
     <div class="formbuilder-text form-group field-disecode"><label for="disecode"
         class="formbuilder-text-label">Disecode<span class="formbuilder-required">*</span></label><input type="text"
         placeholder="disecode" class="form-control" name="disecode" id="disecode" required="required"
-        aria-required="true"></div>
+        aria-required="true" formControlName="disecode"></div>
     <div class="formbuilder-text form-group field-text-1659188642623-0"><label for="text-1659188642623-0"
         class="formbuilder-text-label">InstituteType<span class="formbuilder-required">*</span></label><input
         type="text" class="form-control" name="text-1659188642623-0" id="text-1659188642623-0" required="required"
-        aria-required="true"></div>
+        aria-required="true" formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-AffiliatedState"><label for="AffiliatedState"
         class="formbuilder-text-label">AffiliatedState<span class="formbuilder-required">*</span></label><input
         type="text" placeholder="Gujrat , Maharashtra etc" class="form-control" name="AffiliatedState"
-        id="AffiliatedState" required="required" aria-required="true"></div>
+        id="AffiliatedState" required="required" aria-required="true" formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-AffiliatedName"><label for="AffiliatedName"
         class="formbuilder-text-label">AffiliatedName</label><input type="text" placeholder="AffiliatedName"
-        class="form-control" name="AffiliatedName" id="AffiliatedName"></div>
+        class="form-control" name="AffiliatedName" id="AffiliatedName" formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-AdmissionStartYear"><label for="AdmissionStartYear"
         class="formbuilder-text-label">AdmissionStartYear<span class="formbuilder-required">*</span></label><input
         type="text" placeholder="2018 ,2019 etc" class="form-control" name="AdmissionStartYear" id="AdmissionStartYear"
-        required="required" aria-required="true"></div>
+        required="required" aria-required="true" formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-Password"><label for="Password"
         class="formbuilder-text-label">Password<span class="formbuilder-required">*</span></label><input type="text"
         placeholder="abc@123" class="form-control" name="Password" id="Password" required="required"
-        aria-required="true"></div>
+        aria-required="true" formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-Address"><label for="Address"
         class="formbuilder-text-label">Address<span class="formbuilder-required">*</span></label><input type="text"
-        placeholder="Address" class="form-control" name="Address" id="Address" required="required" aria-required="true">
+        placeholder="Address" class="form-control" name="Address" id="Address" required="required" aria-required="true"
+        formControlName="TraineeId">
     </div>
     <div class="formbuilder-text form-group field-City"><label for="City" class="formbuilder-text-label">City<span
           class="formbuilder-required">*</span></label><input type="text" placeholder="City" class="form-control"
-        name="City" id="City" required="required" aria-required="true"></div>
+        name="City" id="City" required="required" aria-required="true" formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-State"><label for="State" class="formbuilder-text-label"><span style="font-family: Roboto ">State</span><span class="formbuilder-required">*</span></label><input type="text" placeholder="State"
-        class="form-control" name="State" id="State" required="required" aria-required="true"></div>
+        class="form-control" name="State" id="State" required="required" aria-required="true" 
+        formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-District"><label for="District"
         class="formbuilder-text-label">District<span class="formbuilder-required">*</span></label><input type="text"
         placeholder="District" class="form-control" name="District" id="District" required="required"
-        aria-required="true"></div>
+        aria-required="true" formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-Pincode"><label for="Pincode"
         class="formbuilder-text-label">Pincode<span class="formbuilder-required">*</span></label><input type="text"
-        placeholder="123456" class="form-control" name="Pincode" id="Pincode" required="required" aria-required="true">
+        placeholder="123456" class="form-control" name="Pincode" id="Pincode" required="required" aria-required="true"
+        formControlName="TraineeId">
     </div>
     <div class="formbuilder-text form-group field-PrincipalName"><label for="PrincipalName"
         class="formbuilder-text-label">PrincipalName<span class="formbuilder-required">*</span></label><input
         type="text" placeholder="PrincipalName" class="form-control" name="PrincipalName" id="PrincipalName"
-        required="required" aria-required="true"></div>
+        required="required" aria-required="true" formControlName="TraineeId"></div>
     <div class="formbuilder-text form-group field-PrincipalNumber"><label for="PrincipalNumber"
         class="formbuilder-text-label">PrincipalNumber<span class="formbuilder-required">*</span></label><input
         type="text" placeholder="PrincipalNumber" class="form-control" name="PrincipalNumber" id="PrincipalNumber"
-        required="required" aria-required="true"></div>
+        required="required" aria-required="true" formControlName="TraineeId"></div>
   </div>
   <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="TraineeId">
     <label class="form-check-label" for="exampleCheck1"> All the above Information furnished by me is true to the best of my knowledge</label>
  </div>
 
@@ -80,4 +321,4 @@
 
 </div>
 
-</form>
+</form> -->
