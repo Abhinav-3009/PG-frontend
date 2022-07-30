@@ -1,0 +1,16 @@
+.mgrt{
+    margin-right: 10px;
+}
+
+.button-parent{
+    display: flex;
+    
+}
+
+.child{
+    flex:1;
+}
+
+h1{
+    text-align: center;
+}
