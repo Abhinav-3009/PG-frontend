@@ -25,11 +25,10 @@ export class StudentRegistrationComponent implements OnInit {
   {
 
     this.studentdata=student;
-    console.log(this.studentdata)
     this.studentservice.addStudent(this.studentdata).subscribe(()=>
     {
       
-      alert("Registration successfull")
+      alert("Student Registration successfull")
       this.router.navigate(['/Home'])
     })
 

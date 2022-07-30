@@ -21,30 +21,31 @@
         <label for="InstituteCategory" class="col-4 col-form-label">InstituteCategory</label>
         <div class="col-8">
             <input id="InstituteCategory" name="InstituteCategory" placeholder="Government or Private" type="text"
-                class="form-control" [(ngModel)]="institutedata.name" required #InstituteCategory="ngModel">
+                class="form-control" [(ngModel)]="institutedata.InstituteCategory" required #InstituteCategory="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Name" class="col-4 col-form-label">Name</label>
         <div class="col-8">
             <input id="Name" name="Name" placeholder="Elon Musk" type="text" class="form-control"
-                [(ngModel)]="institutedata.name" required #Name="ngModel">
+                [(ngModel)]="institutedata.Name" required #Name="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Institutecode" class="col-4 col-form-label">Institutecode</label>
         <div class="col-8">
-            <input id="Institutecode" name="Institutecode" placeholder="1234" type="text" class="form-control"
+            <input id="Institutecode" name="Institutecode" placeholder="1234" type="number" class="form-control"
                 [(ngModel)]="institutedata.Institutecode" required #Institutecode="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Disecode" class="col-4 col-form-label">Disecode</label>
         <div class="col-8">
-            <input id="Disecode" name="Disecode" placeholder="1234" type="text" class="form-control"
+            <input id="Disecode" name="Disecode" placeholder="1234" type="number" class="form-control"
                 [(ngModel)]="institutedata.Disecode" required #Disecode="ngModel">
         </div>
     </div>
+    <!--
     <div class="form-group row">
         <label for="Disecode" class="col-4 col-form-label">Disecode</label>
         <div class="col-8">
@@ -52,19 +53,27 @@
                 [(ngModel)]="institutedata.Disecode" required #Disecode="ngModel">
         </div>
     </div>
-    <!--location to be added here-->
+    location to be added here-->
+
+    <div class="form-group row">
+        <label class="col-4">Location</label> 
+        <div class="col-8" >
+          <span class=" mgrt ,custom-control custom-radio custom-control-inline">
+            <input name="Location" id="Location" type="radio" class="custom-control-input" value="Rural" required [(ngModel)]="institutedata.Location" #Location="ngModel"> 
+            <label for="Location" class="custom-control-label">Rural</label>
+          </span>
+          <span class="mgrt ,custom-control custom-radio custom-control-inline">
+            <input name="Location" id="Location" type="radio" class="custom-control-input" value="Urban" required [(ngModel)]="institutedata.Location" #Location="ngModel"> 
+            <label for="Location" class="custom-control-label">Urban</label>
+          </span>
+        </div>
+      </div>
+
     <div class="form-group row">
         <label for="InstituteType" class="col-4 col-form-label">InstituteType</label>
         <div class="col-8">
             <input id="InstituteType" name="InstituteType" placeholder="College/ School/ University" type="text" class="form-control"
                 [(ngModel)]="institutedata.InstituteType" required #InstituteType="ngModel">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="AffiliatedState" class="col-4 col-form-label">AffiliatedState</label>
-        <div class="col-8">
-            <input id="AffiliatedState" name="AffiliatedState" placeholder="Maharashtra" type="text" class="form-control"
-                [(ngModel)]="institutedata.AffiliatedState" required #AffiliatedState="ngModel">
         </div>
     </div>
     <div class="form-group row">
@@ -102,6 +111,31 @@
                 required>
         </div>
     </div>
+
+    <div class="form-group row">
+        <label for="ProofofExistence" class="col-4 col-form-label">
+            <h4>Proof of Existance of Institute:</h4>
+            <br>
+            Institute Establishment/Registration Certificate No.
+        </label>
+        <div class="col-8">
+            <input id="ProofofExistence" name="ProofofExistence" placeholder="ACNRFO1234" type="text" class="form-control"
+                 required >
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="AffiliatedTo" class="col-4 col-form-label">
+            <h4>Affiliated To:</h4>
+            <br>
+            Unviersity/Board Affiliation Certificate Number
+        </label>
+        <div class="col-8">
+            <input id="AffiliatedTo" name="AffiliatedTo" placeholder="AJJBF1234" type="text" class="form-control"
+                 required >
+        </div>
+    </div>
+
     <div class="form-group row">
         <label for="Address" class="col-4 col-form-label">Address</label>
         <div class="col-8">
@@ -109,13 +143,7 @@
                 [(ngModel)]="institutedata.Address" required #Address="ngModel">
         </div>
     </div>
-    <div class="form-group row">
-        <label for="Address" class="col-4 col-form-label">Address</label>
-        <div class="col-8">
-            <input id="Address" name="Address" placeholder="complete address" type="text" class="form-control"
-                [(ngModel)]="institutedata.Address" required #Address="ngModel">
-        </div>
-    </div>
+    
     <div class="form-group row">
         <label for="City" class="col-4 col-form-label">City</label>
         <div class="col-8">
@@ -135,13 +163,13 @@
         <label for="District" class="col-4 col-form-label">District</label>
         <div class="col-8">
             <input id="District" name="Disctrict" placeholder="Disctrict" type="text" class="form-control"
-                [(ngModel)]="institutedata.Disctrict" required #District="ngModel">
+                [(ngModel)]="institutedata.District" required #District="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Pincode" class="col-4 col-form-label">Pincode</label>
         <div class="col-8">
-            <input id="Pincode" name="Pincode" placeholder="Pincode" type="text" class="form-control"
+            <input id="Pincode" name="Pincode" placeholder="Pincode" type="number" class="form-control"
                 [(ngModel)]="institutedata.Pincode" required #Pincode="ngModel">
         </div>
     </div>
@@ -184,8 +212,7 @@
 
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1"> All the above Information furnished by me is true to the
-            best of my knowledge</label>
+        <label class="form-check-label" for="exampleCheck1"> All the details and documents submitted by us are valid and true. If found guilty of submitting invalid documents we may be held responsible for that act by us.</label>
     </div>
 
     <div class="button-parent">

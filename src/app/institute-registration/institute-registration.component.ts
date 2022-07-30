@@ -5,6 +5,9 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
+import { IInstitute } from '../iinstitute';
+import { InstituteService } from '../Services/institute.service';
 
 @Component({
   selector: 'app-institute-registration',
@@ -12,46 +15,44 @@ import {
   styleUrls: ['./institute-registration.component.css']
 })
 export class InstituteRegistrationComponent implements OnInit {
-  instituteRegisterForm: FormGroup = new FormGroup({});
-  submitted = false;
-  isValidForm = false;
+  institutedata:IInstitute={
+    InstituteCategory:'',
+    Name:'',
+    Institutecode:0,
+    Disecode:0,
+    Location:'',
+    InstituteType:'',
+    AffiliatedState:'',
+    AffiliatedName:'',
+    AdmissionStartYear:'',
+    Password:'',
+    Address:'',
+    City:'',
+    State:'',
+    District:'',
+    Pincode:0,
+    PrincipalName:'',
+    PrincipalNumber:'',
+  }
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private instituteservice:InstituteService,private router:Router) { }
+
+  saveInstitute(institute:IInstitute)
+  {
+    this.institutedata=institute;
+    this.instituteservice.addInstitute(this.institutedata).subscribe(()=>
+    {
+      console.log(this.institutedata)
+      alert("Institute Registration Successfull")
+      this.router.navigate(['/Home'])
+    })
+  }
 
   ngOnInit(): void {
-    this.instituteRegisterForm = this.formBuilder.group(
-      {
+    
+  }
 
-        InstituteCatagory: ['', Validators.required],
-        Name: ['', [Validators.required]],
-        Institutecode: ['', Validators.required],
-        Disecode: ['', Validators.required],
-        Location: ['', Validators.required],
-        InstituteType: ['', Validators.required],
-        AffilatedState: ['', Validators.required],
-        AffilatedName: ['', Validators.required],
-        AdmissionStartYear: ['', Validators.required],
-        password: [
-          '',
-          [
-            Validators.required,
-            Validators.maxLength(10),
-          ],
-        ],
-        Address: ['', Validators.required],
-        City: ['', Validators.required],
-        State: ['', Validators.required],
-        District: ['', Validators.required],
-        Pincode: ['', Validators.required],
-        PrincipalName: ['', Validators.required],
-        PrincipalNumber: ['', Validators.required],
-        confirmPassword: ['', Validators.required],
-        acceptTerms: [false, Validators.requiredTrue],
-      },
-      //{
-      //  validators: [Validation.match('password', 'confirmPassword')],
-      //  }
-    );
+        
   }
 
 
@@ -78,4 +79,4 @@ export class InstituteRegistrationComponent implements OnInit {
   //   this.isValidForm = false;
   //   this.instituteRegisterForm.reset();
   // }
-}
+

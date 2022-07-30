@@ -10,6 +10,7 @@ import { InstituteHomeComponent } from './institute-home/institute-home.componen
 import { InstituteLoginComponent } from './institute-login/institute-login.component';
 import { InstituteRegistrationComponent } from './institute-registration/institute-registration.component';
 import { InstituteStudentApplicationsComponent } from './institute-student-applications/institute-student-applications.component';
+import { ScholarshipApplicationComponent } from './scholarship-application/scholarship-application.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:'InstituteLogin',component:InstituteLoginComponent},
   {path:'InstituteRegistration',component:InstituteRegistrationComponent},
   {path:'InstituteStudentApplication',component:InstituteStudentApplicationsComponent},
+  {path:'ScholarshipApplication',component:ScholarshipApplicationComponent},
   {path: '', redirectTo: '/Home', pathMatch: 'full'}
 ];
 

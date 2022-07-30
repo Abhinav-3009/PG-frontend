@@ -1,0 +1,36 @@
+export interface SchApplication {
+    Religion:string
+    Community:string
+    Fathername:string
+    Mothername:string
+    AnnualIncome:number
+    InstituteName:string
+    PresentCourse:string
+    PresentCourseYear:string
+    ModeOfStudy:string
+    ClassStartDate:Date
+    UniversityBoardName:string
+    PreviousCourse:string
+    PreviousPassingYear:string
+    PreviousCoursePercentage:number
+    RollNumber10th:number
+    BoardName10th:string
+    PassingYear10th:string
+    Percentage10th:number
+    RollNumber12th:number
+    BoardName12th:string
+    PassingYear12th:string
+    Percentage12th:number
+    AdmissionFee:number
+    TuitionFee:number
+    OtherFee:number
+    IsDisabled:string
+    DisabilityType:string
+    DisabilityPercentage:number
+    MaritalStatus:string
+    ParentsProfession:string
+    State:string
+    District:string
+    Address:string
+    Pincode:number
+}
