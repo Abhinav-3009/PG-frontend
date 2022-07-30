@@ -15,65 +15,67 @@ export class InstituteRegistrationComponent implements OnInit {
   instituteRegisterForm: FormGroup = new FormGroup({});
   submitted = false;
   isValidForm = false;
-  states = ['AndhraPradesh', 'Karnataka', 'TamilNadu', 'Kerala'];
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.instituteRegisterForm = this.formBuilder.group(
       {
-        name: ['', [Validators.required]],
-        instituteCatagory: ['', Validators.required],
-        instituteCode: ['', Validators.required],
-        diseCode: ['', Validators.required],
-        location: ['', Validators.required],
-        instituteType: ['', Validators.required],
-        affilatedUniversityState: ['', Validators.required],
-        affilatedUniversityName: ['', Validators.required],
-        admissionStarted: ['', Validators.required],
-        lineOne: ['', Validators.required],
-        lineTwo: ['', Validators.required],
-        state: ['', Validators.required],
-        district: ['', Validators.required],
-        city: ['', Validators.required],
-        pinCode: ['', Validators.required],
-        principalName: ['', Validators.required],
-        mobileNumber: ['', Validators.required],
-        telePhone: ['', Validators.required],
+
+        InstituteCatagory: ['', Validators.required],
+        Name: ['', [Validators.required]],
+        Institutecode: ['', Validators.required],
+        Disecode: ['', Validators.required],
+        Location: ['', Validators.required],
+        InstituteType: ['', Validators.required],
+        AffilatedState: ['', Validators.required],
+        AffilatedName: ['', Validators.required],
+        AdmissionStartYear: ['', Validators.required],
         password: [
           '',
           [
             Validators.required,
-            Validators.minLength(6),
             Validators.maxLength(10),
           ],
         ],
+        Address: ['', Validators.required],
+        City: ['', Validators.required],
+        State: ['', Validators.required],
+        District: ['', Validators.required],
+        Pincode: ['', Validators.required],
+        PrincipalName: ['', Validators.required],
+        PrincipalNumber: ['', Validators.required],
         confirmPassword: ['', Validators.required],
         acceptTerms: [false, Validators.requiredTrue],
       },
       //{
       //  validators: [Validation.match('password', 'confirmPassword')],
-    //  }
+      //  }
     );
   }
 
-  get f(): { [key: string]: AbstractControl } {
-    return this.instituteRegisterForm.controls;
-  }
 
-  onSubmit() {
-    this.submitted = true;
-    this.isValidForm = true;
-    if (this.instituteRegisterForm.invalid) {
-      this.isValidForm = true;
-      return;
-    }
-    console.log(this.instituteRegisterForm.value);
-    this.reset();
-  }
-  reset() {
-    this.submitted = false;
-    this.isValidForm = false;
-    this.instituteRegisterForm.reset();
-  }
+
+
+
+
+  // get f(): { [key: string]: AbstractControl } {
+  //   return this.instituteRegisterForm.controls;
+  // }
+
+  // onSubmit() {
+  //   this.submitted = true;
+  //   this.isValidForm = true;
+  //   if (this.instituteRegisterForm.invalid) {
+  //     this.isValidForm = true;
+  //     return;
+  //   }
+  //   console.log(this.instituteRegisterForm.value);
+  //   this.reset();
+  // }
+  // reset() {
+  //   this.submitted = false;
+  //   this.isValidForm = false;
+  //   this.instituteRegisterForm.reset();
+  // }
 }
