@@ -4,6 +4,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IStudent } from '../istudent';
+import { IStudentLogin } from '../istudent-login';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +18,9 @@ export class StudentService {
 
   addStudent(student:IStudent):Observable<any> {
     return this.httpclient.post<IStudent>(this.url + 'AddStudent',student, this.httpOptions)
+  }
+
+  checkStudent(login:IStudentLogin):Observable<any>{
+    return this.httpclient.post<IStudentLogin>(this.url + 'StudentLogin' ,login ,this.httpOptions)
   }
 }
