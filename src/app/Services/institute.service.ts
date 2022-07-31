@@ -19,4 +19,8 @@ export class InstituteService {
   checkInstitute(login:IInstituteLogin):Observable<any>{
     return this.httpclient.post<IInstituteLogin>(this.url + 'InstituteLogin' ,login ,this.httpOptions)
   }
+
+  getInstitute(id:number):Observable<any>{
+    return this.httpclient.get<IInstitute>(this.url+'InstituteDetails/'+id)
+  }
 }

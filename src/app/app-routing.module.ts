@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:'StudentHome/:id',component:StudentHomeComponent},
   {path:'StudentLogin',component:StudentLoginComponent},
   {path:'StudentRegistration',component:StudentRegistrationComponent},
-  {path:'InstituteHome',component:InstituteHomeComponent},
+  {path:'InstituteHome/:id',component:InstituteHomeComponent},
   {path:'InstituteLogin',component:InstituteLoginComponent},
   {path:'InstituteRegistration',component:InstituteRegistrationComponent},
   {path:'InstituteStudentApplication',component:InstituteStudentApplicationsComponent},

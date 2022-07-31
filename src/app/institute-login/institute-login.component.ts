@@ -34,7 +34,7 @@ export class InstituteLoginComponent implements OnInit {
     {
       this.loginid=d
       alert("Login Successfull. Your Id is " + this.loginid)
-      this.router.navigate(['/InstituteHome'])
+      this.router.navigate(['/InstituteHome/',this.loginid])
     })
   }
 

@@ -11,7 +11,7 @@ export class StudentHomeComponent implements OnInit {
   studentdata:IStudent={name:'',dob:new Date(),gender:'',mobileNumber:'',email:'',instituteCode:0,aadhaar:'',accountNo:'',bankIFSC:'',bankName:'',password:''}
   studentid:number=0
   constructor(private studentservice:StudentService,private activatedroute:ActivatedRoute) {
-    //this.deptservice.getDept(this.id).subscribe(data=>this.dept=data)
+    
    }
 
   ngOnInit(): void {
@@ -19,5 +19,5 @@ export class StudentHomeComponent implements OnInit {
     this.studentid=Number(tid);
     this.studentservice.getStudent(this.studentid).subscribe((data:IStudent)=>{this.studentdata=data} )
   }
-
+ 
 }
