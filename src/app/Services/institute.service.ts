@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IInstitute } from '../iinstitute';
+import { IInstituteLogin } from '../iinstitute-login';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +14,9 @@ export class InstituteService {
 
   addInstitute(institute:IInstitute):Observable<IInstitute>{
     return this.httpclient.post<IInstitute>(this.url + 'AddInstitute' ,institute , this.httpOptions)
+  }
+
+  checkInstitute(login:IInstituteLogin):Observable<any>{
+    return this.httpclient.post<IInstituteLogin>(this.url + 'InstituteLogin' ,login ,this.httpOptions)
   }
 }
