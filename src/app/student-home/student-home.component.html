@@ -1,1 +1,26 @@
-<p>student-home works!</p>
+<div class="mainstudenthome">
+    <div class="container mrgn-rt" id="leftcomponent">
+        <div>
+            <h2>Details of Student {{studentdata.name}}</h2>
+        <hr>
+        <div >
+            DOB : {{studentdata.dob}}<br>
+            Gender : {{studentdata.gender}}<br>
+        </div><br>
+        </div>
+        
+    </div>
+    <div id="rightcomponent" class="container">
+        <div class="container" id="toprightcomponent">
+            <h2>Details of Student {{studentdata.name}}</h2>
+            <hr>
+            <div >
+                DOB : {{studentdata.dob}}<br>
+                Gender : {{studentdata.gender}}<br>
+            </div><br>
+            <a [routerLink]="['/ScholarshipApplication/',studentid]" class="btn btn-primary">Apply For Scholarship</a>
+        </div>
+    </div>
+    
+</div>
+

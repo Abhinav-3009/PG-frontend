@@ -20,14 +20,14 @@ const routes: Routes = [
   {path:'Home',component:HomeComponent},
   {path:'AboutUs',component:AboutUsComponent},
   {path:'ContactUs',component:ContactUsComponent},
-  {path:'StudentHome',component:StudentHomeComponent},
+  {path:'StudentHome/:id',component:StudentHomeComponent},
   {path:'StudentLogin',component:StudentLoginComponent},
   {path:'StudentRegistration',component:StudentRegistrationComponent},
   {path:'InstituteHome',component:InstituteHomeComponent},
   {path:'InstituteLogin',component:InstituteLoginComponent},
   {path:'InstituteRegistration',component:InstituteRegistrationComponent},
   {path:'InstituteStudentApplication',component:InstituteStudentApplicationsComponent},
-  {path:'ScholarshipApplication',component:ScholarshipApplicationComponent},
+  {path:'ScholarshipApplication/:id',component:ScholarshipApplicationComponent},
   {path: '', redirectTo: '/Home', pathMatch: 'full'}
 ];
 

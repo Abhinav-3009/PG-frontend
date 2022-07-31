@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SchApplication } from '../sch-application';
 import { SchAppService } from '../Services/sch-app.service';
 
@@ -10,8 +10,8 @@ import { SchAppService } from '../Services/sch-app.service';
 })
 export class ScholarshipApplicationComponent implements OnInit {
 SchAppdata:SchApplication={
-  StudentId:7,
-  InstituteId:1,
+  StudentId:0,
+  InstituteId:6,
   Religion:'',
     Community:'',
     Fathername:'',
@@ -46,9 +46,9 @@ SchAppdata:SchApplication={
     District:'',
     Address:'',
     Pincode:0,
-    ScholarshipId:1
+    ScholarshipId:0
 }
-  constructor(private schappservice:SchAppService, private router:Router) { }
+  constructor(private schappservice:SchAppService, private router:Router,private activatedroute:ActivatedRoute) { }
 
   saveSchApp(schapplication:SchApplication)
   {
@@ -57,11 +57,13 @@ SchAppdata:SchApplication={
     {
       console.log(this.SchAppdata)
       alert("Scholarship application Successfull")
-      this.router.navigate(['/Home'])
+      this.router.navigate(['/StudentHome/',this.SchAppdata.StudentId])
     })
   }
 
   ngOnInit(): void {
+    const tid=this.activatedroute.snapshot.paramMap.get('id')
+    this.SchAppdata.StudentId=Number(tid);
   }
 
 }

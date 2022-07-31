@@ -32,9 +32,9 @@ export class StudentLoginComponent implements OnInit {
     this.logindata=login
     this.studentservice.checkStudent(this.logindata).subscribe((d)=>
     {
-      this.loginid=d.studentId
+      this.loginid=d
       alert("Login Successfull . Your Id is " + this.loginid)
-      this.router.navigate(['/StudentHome'])
+      this.router.navigate(['/StudentHome/',this.loginid])
     })
   }
 

@@ -23,4 +23,7 @@ export class StudentService {
   checkStudent(login:IStudentLogin):Observable<any>{
     return this.httpclient.post<IStudentLogin>(this.url + 'StudentLogin' ,login ,this.httpOptions)
   }
+  getStudent(id:number):Observable<any>{
+    return this.httpclient.get<IStudent>(this.url+'StudentDetails/'+id)
+  }
 }
