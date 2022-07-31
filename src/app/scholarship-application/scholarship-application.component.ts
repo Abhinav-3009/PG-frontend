@@ -10,8 +10,8 @@ import { SchAppService } from '../Services/sch-app.service';
 })
 export class ScholarshipApplicationComponent implements OnInit {
 SchAppdata:SchApplication={
-  StudentId:5,
-  InstituteId:6,
+  StudentId:7,
+  InstituteId:1,
   Religion:'',
     Community:'',
     Fathername:'',
@@ -55,6 +55,7 @@ SchAppdata:SchApplication={
     this.SchAppdata=schapplication;
     this.schappservice.addSchApplication(this.SchAppdata).subscribe(()=>
     {
+      console.log(this.SchAppdata)
       alert("Scholarship application Successfull")
       this.router.navigate(['/Home'])
     })

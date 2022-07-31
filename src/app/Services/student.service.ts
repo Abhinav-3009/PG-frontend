@@ -15,7 +15,7 @@ export class StudentService {
 
   constructor(private httpclient:HttpClient) { }
 
-  addStudent(student:IStudent):Observable<IStudent> {
+  addStudent(student:IStudent):Observable<any> {
     return this.httpclient.post<IStudent>(this.url + 'AddStudent',student, this.httpOptions)
   }
 }

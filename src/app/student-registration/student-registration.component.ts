@@ -18,6 +18,7 @@ import { StudentService } from '../Services/student.service';
   styleUrls: ['./student-registration.component.css']
 })
 export class StudentRegistrationComponent implements OnInit {
+  studentId:number = 0
   studentdata:IStudent={name:'',dob:new Date(),gender:'',mobileNumber:'',email:'',instituteCode:0,aadhaar:'',accountNo:'',bankIFSC:'',bankName:'',password:''}
   constructor(private studentservice:StudentService, private router:Router){}
 
@@ -25,10 +26,10 @@ export class StudentRegistrationComponent implements OnInit {
   {
 
     this.studentdata=student;
-    this.studentservice.addStudent(this.studentdata).subscribe(()=>
+    this.studentservice.addStudent(this.studentdata).subscribe((d)=>
     {
-      
-      alert("Student Registration successfull")
+      this.studentId=d
+      alert("Student Registration successfull. Your Id is " + this.studentId)
       this.router.navigate(['/Home'])
     })
 

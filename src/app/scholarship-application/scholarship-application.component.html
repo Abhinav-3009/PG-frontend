@@ -284,7 +284,25 @@
         </div>
     </div>
 
-
+    <h3>SCHOLARSHIP</h3>
+   <!--<div class="form-group row">
+      <label for="ScholarshipName" class="col-4 col-form-label">Select Scholarship:</label>
+  <input type="number" name="ScholarshipName" list="ScholarshipName" placeholder="" [(ngModel)]="SchAppdata.ScholarshipId" required #ScholarshipId="ngModel">
+  <datalist id="ScholarshipName">
+      <option value="1">Post Matric Scholarship</option>
+        <option value="2">Pragati Scholarship</option>
+        <option value="3">Merit Based Scholarship</option>
+  </datalist>
+  </div>
+  --> 
+  <div class="form-group">
+    <label for="ScholarshipId">Select Scholarship:</label>
+    <select class="form-control" name="ScholarshipId" id="ScholarshipId"  placeholder="" [(ngModel)]="SchAppdata.ScholarshipId" required #ScholarshipId="ngModel">
+        <option value="1">Post Matric Scholarship</option>
+        <option value="2">Pragati Scholarship</option>
+        <option value="3">Merit Based Scholarship</option>
+    </select>
+  </div>
 
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -306,6 +324,7 @@
             </div>
         </div>
     </div>
+
 </form>
 
 
