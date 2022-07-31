@@ -33,7 +33,7 @@ export class StudentLoginComponent implements OnInit {
     this.studentservice.checkStudent(this.logindata).subscribe((d)=>
     {
       this.loginid=d.studentId
-      alert("Login Successfull. Your Id is " + this.loginid)
+      alert("Login Successfull . Your Id is " + this.loginid)
       this.router.navigate(['/StudentHome'])
     })
   }
