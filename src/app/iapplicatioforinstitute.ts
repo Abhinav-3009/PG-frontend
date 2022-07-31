@@ -1,5 +1,6 @@
 export interface Iapplicatioforinstitute {
-        religion:string,
-        community:string,
-        fathername:string,
+        applicationId:number
+        studentId: number,
+        scholarshipId: number,
+        presentCourse: string
 }

@@ -4,19 +4,21 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>religion</th>
-                    <th>community</th>
-                    <th>fathername</th>
+                    <th>Application ID</th>
+                    <th>Student ID</th>
+                    <th>Scholarship ID</th>
+                    <th>Present Course Name</th>
                 </tr>
                 
             </thead>
             <tbody>
                 <tr *ngFor="let app of application">
-                    <td>{{app.religion}}</td>
-                    <td>{{app.community}}</td>
-                    <td>{{app.fathername}}</td>
-                    <!-- <td><a [routerLink]="['/find/',dept.id]">Details</a>&nbsp;&nbsp;&nbsp;
-                    <a [routerLink]="['/edit/',dept.id]">Edit</a></td>&nbsp;&nbsp;&nbsp; -->
+                    <td>{{app.applicationId}}</td>
+                    <td>{{app.studentId}}</td>
+                    <td>{{app.scholarshipId}}</td>
+                    <td>{{app.presentCourse}}</td>
+                    <td><a [routerLink]="['/InstituteStudentApplication/',app.applicationId]">Details</a>&nbsp;&nbsp;&nbsp;
+                    </td>&nbsp;&nbsp;&nbsp;
                 </tr>
             </tbody>
         </table>

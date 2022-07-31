@@ -26,7 +26,7 @@ const routes: Routes = [
   {path:'InstituteHome/:id',component:InstituteHomeComponent},
   {path:'InstituteLogin',component:InstituteLoginComponent},
   {path:'InstituteRegistration',component:InstituteRegistrationComponent},
-  {path:'InstituteStudentApplication',component:InstituteStudentApplicationsComponent},
+  {path:'InstituteStudentApplication/:id',component:InstituteStudentApplicationsComponent},
   {path:'ScholarshipApplication/:id',component:ScholarshipApplicationComponent},
   {path:'ApplicationForInstitute/:id', component:ApplicationsForInstituteComponent},
   {path: '', redirectTo: '/Home', pathMatch: 'full'}
