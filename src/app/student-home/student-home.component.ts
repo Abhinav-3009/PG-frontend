@@ -11,7 +11,7 @@ export class StudentHomeComponent implements OnInit {
   studentdata:IStudent={name:'',dob:new Date(),gender:'',mobileNumber:'',email:'',instituteCode:0,aadhaar:'',accountNo:'',bankIFSC:'',bankName:'',password:''}
   studentid:number=0
   constructor(private studentservice:StudentService,private activatedroute:ActivatedRoute) {
-    
+      
    }
 
   ngOnInit(): void {
