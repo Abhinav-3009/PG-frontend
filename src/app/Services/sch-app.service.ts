@@ -7,7 +7,7 @@ import { SchApplication } from '../sch-application';
   providedIn: 'root'
 })
 export class SchAppService {
-url='http://localhost:21856/api/ScholarApplication/';
+url='http://localhost:21856/api/ScholarshipApplication/';
 httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})};
   constructor(private httpclient:HttpClient) { }
 

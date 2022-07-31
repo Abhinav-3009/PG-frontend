@@ -10,6 +10,8 @@ import { SchAppService } from '../Services/sch-app.service';
 })
 export class ScholarshipApplicationComponent implements OnInit {
 SchAppdata:SchApplication={
+  StudentId:5,
+  InstituteId:6,
   Religion:'',
     Community:'',
     Fathername:'',
@@ -44,6 +46,7 @@ SchAppdata:SchApplication={
     District:'',
     Address:'',
     Pincode:0,
+    ScholarshipId:1
 }
   constructor(private schappservice:SchAppService, private router:Router) { }
 
