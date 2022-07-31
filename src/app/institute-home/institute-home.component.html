@@ -1,22 +1,23 @@
-<div class="mainInstitutehome">
+<div *ngIf="!load">Loading.....</div>
+<div class="mainInstitutehome" *ngIf="load">
     <div class="container mrgn-rt" id="leftcomponent">
         <div>
-            <h2>Details of Institute {{institutedata.Name}}</h2>
+            <h2>Details of Institute {{institutedata.name}}</h2>
         <hr>
         <div >
-            InstituteType : {{institutedata.InstituteType}}<br>
-            State : {{institutedata.State}}<br>
+            InstituteType : {{institutedata.instituteType}}<br>
+            State : {{institutedata.state}}<br>
         </div><br>
         </div>
         
     </div>
     <div id="rightcomponent" class="container">
         <div class="container" id="toprightcomponent">
-            <h2>Details of Institute {{institutedata.Name}}</h2>
+            <h2>Details of Institute {{institutedata.name}}</h2>
             <hr>
             <div >
-                InstituteType : {{institutedata.InstituteType}}<br>
-                State : {{institutedata.State}}<br>
+                InstituteType : {{institutedata.instituteType}}<br>
+                State : {{institutedata.state}}<br>
             </div><br>
             <a [routerLink]="['/ApplicationForInstitute/',instituteid]" class="btn btn-primary">Show all Applications</a>
         </div>

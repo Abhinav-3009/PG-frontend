@@ -1,20 +1,20 @@
 export interface IInstitute {
-    InstituteCategory:string
-    Name:string
-    Institutecode:number
-    Disecode:number
-    Location:string
-    InstituteType:string
-    AffiliatedState:string
-    AffiliatedName:string
-    AdmissionStartYear:string
-    Password:string
-    Address:string
-    City:string
-    State:string
-    District:string
-    Pincode:number
-    PrincipalName:string
-    PrincipalNumber:string
+    instituteCategory:string
+    name:string
+    institutecode:number
+    disecode:number
+    location:string
+    instituteType:string
+    affiliatedState:string
+    affiliatedName:string
+    admissionStartYear:string
+    password:string
+    address:string
+    city:string
+    state:string
+    district:string
+    pincode:number
+    principalName:string
+    principalNumber:string
 }
 

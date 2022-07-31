@@ -9,42 +9,29 @@ import { InstituteService } from '../Services/institute.service';
   styleUrls: ['./institute-home.component.css']
 })
 export class InstituteHomeComponent implements OnInit {
-  institutedata: IInstitute = {
-    InstituteCategory: 'aaa',
-    Name: '',
-    Institutecode: 0,
-    Disecode: 0,
-    Location: '',
-    InstituteType: '',
-    AffiliatedState: '',
-    AffiliatedName: '',
-    AdmissionStartYear: '',
-    Password: '',
-    Address: '',
-    City: '',
-    State: '',
-    District: '',
-    Pincode: 0,
-    PrincipalName: '',
-    PrincipalNumber: '',
-  }
+  //@ts-ignore
+  institutedata: IInstitute 
 
   instituteid: number = 0
-
+  load:boolean=false
   constructor(private instituteservice: InstituteService, private activatedroute: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
     const tid = this.activatedroute.snapshot.paramMap.get('id')
-    console.log(tid)
+    //console.log(tid)
     this.instituteid = Number(tid);
-    console.log("institute id = " + this.instituteid)
-    this.instituteservice.getInstitute(this.instituteid).subscribe(
-      (data: IInstitute) => {
-        console.log("inside subscribe method")
-        this.institutedata = data}
-    )
+    //console.log("institute id = " + this.instituteid)
+    this.instituteservice.getInstitute(this.instituteid).subscribe((res) => {
+      //console.log(res)
+      this.institutedata=res
+      this.load=true
+      console.log(this.institutedata)
+    }, (err) => {
+      console.log(err)
+    })
+    
     console.log(this.institutedata)
   }
 

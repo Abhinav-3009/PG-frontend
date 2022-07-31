@@ -15,25 +15,8 @@ import { InstituteService } from '../Services/institute.service';
   styleUrls: ['./institute-registration.component.css']
 })
 export class InstituteRegistrationComponent implements OnInit {
-  institutedata:IInstitute={
-    InstituteCategory:'',
-    Name:'',
-    Institutecode:0,
-    Disecode:0,
-    Location:'',
-    InstituteType:'',
-    AffiliatedState:'',
-    AffiliatedName:'',
-    AdmissionStartYear:'',
-    Password:'',
-    Address:'',
-    City:'',
-    State:'',
-    District:'',
-    Pincode:0,
-    PrincipalName:'',
-    PrincipalNumber:'',
-  }
+  //@ts-ignore
+  institutedata:IInstitute
 
   constructor(private instituteservice:InstituteService,private router:Router) { }
 

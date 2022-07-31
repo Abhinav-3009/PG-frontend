@@ -21,28 +21,28 @@
         <label for="InstituteCategory" class="col-4 col-form-label">InstituteCategory</label>
         <div class="col-8">
             <input id="InstituteCategory" name="InstituteCategory" placeholder="Government or Private" type="text"
-                class="form-control" [(ngModel)]="institutedata.InstituteCategory" required #InstituteCategory="ngModel">
+                class="form-control" [(ngModel)]="institutedata.instituteCategory" required #InstituteCategory="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Name" class="col-4 col-form-label">Name</label>
         <div class="col-8">
             <input id="Name" name="Name" placeholder="Elon Musk" type="text" class="form-control"
-                [(ngModel)]="institutedata.Name" required #Name="ngModel">
+                [(ngModel)]="institutedata.name" required #Name="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Institutecode" class="col-4 col-form-label">Institutecode</label>
         <div class="col-8">
             <input id="Institutecode" name="Institutecode" placeholder="1234" type="number" class="form-control"
-                [(ngModel)]="institutedata.Institutecode" required #Institutecode="ngModel">
+                [(ngModel)]="institutedata.institutecode" required #Institutecode="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Disecode" class="col-4 col-form-label">Disecode</label>
         <div class="col-8">
             <input id="Disecode" name="Disecode" placeholder="1234" type="number" class="form-control"
-                [(ngModel)]="institutedata.Disecode" required #Disecode="ngModel">
+                [(ngModel)]="institutedata.disecode" required #Disecode="ngModel">
         </div>
     </div>
     <!--
@@ -59,11 +59,11 @@
         <label class="col-4">Location</label> 
         <div class="col-8" >
           <span class=" mgrt ,custom-control custom-radio custom-control-inline">
-            <input name="Location" id="Location" type="radio" class="custom-control-input" value="Rural" required [(ngModel)]="institutedata.Location" #Location="ngModel"> 
+            <input name="Location" id="Location" type="radio" class="custom-control-input" value="Rural" required [(ngModel)]="institutedata.location" #Location="ngModel"> 
             <label for="Location" class="custom-control-label">Rural</label>
           </span>
           <span class="mgrt ,custom-control custom-radio custom-control-inline">
-            <input name="Location" id="Location" type="radio" class="custom-control-input" value="Urban" required [(ngModel)]="institutedata.Location" #Location="ngModel"> 
+            <input name="Location" id="Location" type="radio" class="custom-control-input" value="Urban" required [(ngModel)]="institutedata.location" #Location="ngModel"> 
             <label for="Location" class="custom-control-label">Urban</label>
           </span>
         </div>
@@ -73,35 +73,35 @@
         <label for="InstituteType" class="col-4 col-form-label">InstituteType</label>
         <div class="col-8">
             <input id="InstituteType" name="InstituteType" placeholder="College/ School/ University" type="text" class="form-control"
-                [(ngModel)]="institutedata.InstituteType" required #InstituteType="ngModel">
+                [(ngModel)]="institutedata.instituteType" required #InstituteType="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="AffiliatedState" class="col-4 col-form-label">AffiliatedState</label>
         <div class="col-8">
             <input id="AffiliatedState" name="AffiliatedState" placeholder="Maharashtra" type="text" class="form-control"
-                [(ngModel)]="institutedata.AffiliatedState" required #AffiliatedState="ngModel">
+                [(ngModel)]="institutedata.affiliatedState" required #AffiliatedState="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="AffiliatedName" class="col-4 col-form-label">AffiliatedName</label>
         <div class="col-8">
             <input id="AffiliatedName" name="AffiliatedName" placeholder="Name of University" type="text" class="form-control"
-                [(ngModel)]="institutedata.AffiliatedName" required #AffiliatedName="ngModel">
+                [(ngModel)]="institutedata.affiliatedName" required #AffiliatedName="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="AdmissionStartYear" class="col-4 col-form-label">AdmissionStartYear</label>
         <div class="col-8">
             <input id="AdmissionStartYear" name="AdmissionStartYear" placeholder="2000" type="text" class="form-control"
-                [(ngModel)]="institutedata.AdmissionStartYear" required #AdmissionStartYear="ngModel">
+                [(ngModel)]="institutedata.admissionStartYear" required #AdmissionStartYear="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Password" class="col-4 col-form-label">Password</label>
         <div class="col-8">
             <input id="Password" name="Password" placeholder="123@12" type="text" class="form-control"
-                [(ngModel)]="institutedata.Password" required #Password="ngModel">
+                [(ngModel)]="institutedata.password" required #Password="ngModel">
         </div>
     </div>
     <div class="form-group row">
@@ -140,7 +140,7 @@
         <label for="Address" class="col-4 col-form-label">Address</label>
         <div class="col-8">
             <input id="Address" name="Address" placeholder="complete address" type="text" class="form-control"
-                [(ngModel)]="institutedata.Address" required #Address="ngModel">
+                [(ngModel)]="institutedata.address" required #Address="ngModel">
         </div>
     </div>
     
@@ -148,7 +148,7 @@
         <label for="City" class="col-4 col-form-label">City</label>
         <div class="col-8">
             <input id="City" name="City" placeholder="Mumbai" type="text" class="form-control"
-                [(ngModel)]="institutedata.City" required #City="ngModel">
+                [(ngModel)]="institutedata.city" required #City="ngModel">
         </div>
     </div>
 
@@ -156,35 +156,35 @@
         <label for="State" class="col-4 col-form-label">State</label>
         <div class="col-8">
             <input id="State" name="State" placeholder="Maharashtra" type="text" class="form-control"
-                [(ngModel)]="institutedata.State" required #State="ngModel">
+                [(ngModel)]="institutedata.state" required #State="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="District" class="col-4 col-form-label">District</label>
         <div class="col-8">
             <input id="District" name="Disctrict" placeholder="Disctrict" type="text" class="form-control"
-                [(ngModel)]="institutedata.District" required #District="ngModel">
+                [(ngModel)]="institutedata.district" required #District="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="Pincode" class="col-4 col-form-label">Pincode</label>
         <div class="col-8">
             <input id="Pincode" name="Pincode" placeholder="Pincode" type="number" class="form-control"
-                [(ngModel)]="institutedata.Pincode" required #Pincode="ngModel">
+                [(ngModel)]="institutedata.pincode" required #Pincode="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="PrincipalName" class="col-4 col-form-label">PrincipalName</label>
         <div class="col-8">
             <input id="PrincipalName" name="PrincipalName" placeholder="PrincipalName" type="text" class="form-control"
-                [(ngModel)]="institutedata.PrincipalName" required #PrincipalName="ngModel">
+                [(ngModel)]="institutedata.principalName" required #PrincipalName="ngModel">
         </div>
     </div>
     <div class="form-group row">
         <label for="PrincipalNumber" class="col-4 col-form-label">PrincipalNumber</label>
         <div class="col-8">
             <input id="PrincipalNumber" name="PrincipalNumber" placeholder="PrincipalNumber" type="text" class="form-control"
-                [(ngModel)]="institutedata.PrincipalNumber" required #PrincipalNumber="ngModel">
+                [(ngModel)]="institutedata.principalNumber" required #PrincipalNumber="ngModel">
         </div>
     </div>
 
