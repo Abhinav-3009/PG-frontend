@@ -1,0 +1,24 @@
+<div class="container">
+    <h3 class="text-danger">Application Listing</h3>
+    <div class="jumbotron">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>religion</th>
+                    <th>community</th>
+                    <th>fathername</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr *ngFor="let app of application">
+                    <td>{{app.religion}}</td>
+                    <td>{{app.community}}</td>
+                    <td>{{app.fathername}}</td>
+                    <!-- <td><a [routerLink]="['/find/',dept.id]">Details</a>&nbsp;&nbsp;&nbsp;
+                    <a [routerLink]="['/edit/',dept.id]">Edit</a></td>&nbsp;&nbsp;&nbsp; -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

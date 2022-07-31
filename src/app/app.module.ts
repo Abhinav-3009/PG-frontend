@@ -19,6 +19,7 @@ import { InstituteStudentApplicationsComponent } from './institute-student-appli
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { ApplicationsForInstituteComponent } from './applications-for-institute/applications-for-institute.component';
 
 
 
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     InstituteRegistrationComponent,
     InstituteHomeComponent,
     ScholarshipApplicationComponent,
-    InstituteStudentApplicationsComponent
+    InstituteStudentApplicationsComponent,
+    ApplicationsForInstituteComponent
   ],
   imports: [
     BrowserModule,

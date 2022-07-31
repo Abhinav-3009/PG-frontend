@@ -1,4 +1,4 @@
-<div class="mainstudenthome">
+<div class="mainInstitutehome">
     <div class="container mrgn-rt" id="leftcomponent">
         <div>
             <h2>Details of Institute {{institutedata.Name}}</h2>
@@ -18,7 +18,7 @@
                 InstituteType : {{institutedata.InstituteType}}<br>
                 State : {{institutedata.State}}<br>
             </div><br>
-            
+            <a [routerLink]="['/ApplicationForInstitute/',instituteid]" class="btn btn-primary">Show all Applications</a>
         </div>
     </div>
     

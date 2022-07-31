@@ -12,7 +12,7 @@ export class InstituteService {
   httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})};
   constructor(private httpclient:HttpClient) { }
 
-  addInstitute(institute:IInstitute):Observable<IInstitute>{
+  addInstitute(institute:IInstitute):Observable<any>{
     return this.httpclient.post<IInstitute>(this.url + 'AddInstitute' ,institute , this.httpOptions)
   }
 
@@ -21,6 +21,10 @@ export class InstituteService {
   }
 
   getInstitute(id:number):Observable<any>{
+    console.log("inside service"+id)
     return this.httpclient.get<IInstitute>(this.url+'InstituteDetails/'+id)
   }
-}
+
+  
+  }
+
