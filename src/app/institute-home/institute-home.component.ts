@@ -9,36 +9,42 @@ import { InstituteService } from '../Services/institute.service';
   styleUrls: ['./institute-home.component.css']
 })
 export class InstituteHomeComponent implements OnInit {
-  institutedata:IInstitute={
-    InstituteCategory:'',
-    Name:'',
-    Institutecode:0,
-    Disecode:0,
-    Location:'',
-    InstituteType:'',
-    AffiliatedState:'',
-    AffiliatedName:'',
-    AdmissionStartYear:'',
-    Password:'',
-    Address:'',
-    City:'',
-    State:'',
-    District:'',
-    Pincode:0,
-    PrincipalName:'',
-    PrincipalNumber:'',
+  institutedata: IInstitute = {
+    InstituteCategory: 'aaa',
+    Name: '',
+    Institutecode: 0,
+    Disecode: 0,
+    Location: '',
+    InstituteType: '',
+    AffiliatedState: '',
+    AffiliatedName: '',
+    AdmissionStartYear: '',
+    Password: '',
+    Address: '',
+    City: '',
+    State: '',
+    District: '',
+    Pincode: 0,
+    PrincipalName: '',
+    PrincipalNumber: '',
   }
 
-  instituteid:number=0
+  instituteid: number = 0
 
-  constructor(private instituteservice:InstituteService,private activatedroute:ActivatedRoute) { 
+  constructor(private instituteservice: InstituteService, private activatedroute: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
-    const tid=this.activatedroute.snapshot.paramMap.get('id')
-    this.instituteid=Number(tid);
-    this.instituteservice.getInstitute(this.instituteid).subscribe((data:IInstitute)=>{this.institutedata=data})
+    const tid = this.activatedroute.snapshot.paramMap.get('id')
+    console.log(tid)
+    this.instituteid = Number(tid);
+    console.log("institute id = " + this.instituteid)
+    this.instituteservice.getInstitute(this.instituteid).subscribe(
+      (data: IInstitute) => {
+        console.log("inside subscribe method")
+        this.institutedata = data}
+    )
     console.log(this.institutedata)
   }
 
