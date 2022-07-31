@@ -1,8 +1,10 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders,HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IInstitute } from '../iinstitute';
 import { IInstituteLogin } from '../iinstitute-login';
+import { catchError,throwError } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +24,11 @@ export class InstituteService {
 
   getInstitute(id:number):Observable<any>{
     console.log("inside service"+id)
-    return this.httpclient.get<IInstitute>(this.url+'InstituteDetails/'+id)
+    return this.httpclient.get<IInstitute>(this.url+'InstituteDetails/'+id).pipe(catchError(this.handleError))
+  }
+
+  handleError(err:HttpErrorResponse){
+    return throwError(err.error)
   }
 
   
