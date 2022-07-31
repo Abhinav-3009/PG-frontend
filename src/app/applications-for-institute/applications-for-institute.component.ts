@@ -22,6 +22,7 @@ export class ApplicationsForInstituteComponent implements OnInit {
       (data) => {
 
         this.application = data
+        
       }
     )
     console.log(this.application)

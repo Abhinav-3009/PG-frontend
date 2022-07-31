@@ -14,4 +14,8 @@ httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})};
   addSchApplication(SchApplication:SchApplication):Observable<SchApplication>{
     return this.httpclient.post<SchApplication>(this.url + 'AddScholarshipApplication' ,SchApplication , this.httpOptions)
   }
+
+  getSchApplication(id:number):Observable<any>{
+    return this.httpclient.get<any>(this.url + 'FindScholarshipApplication/'+id)
+  }
 }
