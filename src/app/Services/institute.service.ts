@@ -15,8 +15,8 @@ export class InstituteService {
   httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})};
   constructor(private httpclient:HttpClient) { }
 
-  addInstitute(institute:IInstituteregister):Observable<any>{
-    return this.httpclient.post<IInstituteregister>(this.url + 'AddInstitute' ,institute , this.httpOptions)
+  addInstitute(institute:any):Observable<any>{
+    return this.httpclient.post<any>(this.url + 'AddInstitute' ,institute , this.httpOptions)
   }
 
   checkInstitute(login:IInstituteLogin):Observable<any>{

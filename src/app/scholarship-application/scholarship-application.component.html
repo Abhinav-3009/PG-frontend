@@ -1,10 +1,10 @@
 <h1>SCHOLARSHIP APPLICATION FORM</h1>
 
-<form class="container" (ngSubmit)="saveSchApp(SchAppdata)" #instituteRegistrationForm="ngForm">
+<form class="container" [formGroup] = "applicationform" (ngSubmit)="saveSchApp()" >
 
     <div class="form-group row">
         <label for="Religion" class="col-4 col-form-label">Religion</label>
-    <input type="text" name="Religion" list="Religion" placeholder="Select your Religion" [(ngModel)]="SchAppdata.Religion" required #Religion="ngModel">
+    <input type="text"  list="Religion" placeholder="Select your Religion" formControlName="Religion">
     <datalist id="Religion">
         <option value="Hindu">
         <option value="Muslim">
@@ -17,65 +17,65 @@
     </div>
 
     <div class="form-group row">
-        <label for="Category" class="col-4 col-form-label">Community/Category</label>
+        <label for="Community" class="col-4 col-form-label">Community/Category</label>
         <div class="col-8">
-            <input id="Category" name="Category" placeholder="SC/ST/OBC etc" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.Community" required #Category="ngModel">
+            <input id="Community"  placeholder="SC/ST/OBC etc" type="text"
+                class="form-control" formControlName="Community">
         </div>
     </div>
 
     <div class="form-group row">
-        <label for="FatherName" class="col-4 col-form-label">Father Name</label>
+        <label for="Fathername" class="col-4 col-form-label">Father Name</label>
         <div class="col-8">
-            <input id="FatherName" name="FatherName" placeholder="Father Name" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.Fathername" required #FatherName="ngModel">
+            <input id="Fathername" placeholder="Father Name" type="text"
+                class="form-control" formControlName="Fathername">
         </div>
     </div>
 
     <div class="form-group row">
-        <label for="MotherName" class="col-4 col-form-label">Mother Name</label>
+        <label for="Mothername" class="col-4 col-form-label">Mother Name</label>
         <div class="col-8">
-            <input id="MotherName" name="MotherName" placeholder="Mother Name" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.Mothername" required #MotherName="ngModel">
+            <input id="Mothername" name="MotherName" placeholder="Mother Name" type="text"
+                class="form-control" formControlName="Mothername">
         </div>
     </div>
     
     <div class="form-group row">
         <label for="AnnualIncome" class="col-4 col-form-label">Family Annual Income</label>
         <div class="col-8">
-            <input id="AnnualIncome" name="AnnualIncome" placeholder="AnnualIncome" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.AnnualIncome" required #AnnualIncome="ngModel">
+            <input id="AnnualIncome" formControlName="AnnualIncome" placeholder="AnnualIncome" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="InstituteName" class="col-4 col-form-label">Institute Name</label>
         <div class="col-8">
-            <input id="InstituteName" name="InstituteName" placeholder="Institute Name" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.InstituteName" required #InstituteName="ngModel">
+            <input id="InstituteName" formControlName="InstituteName" placeholder="Institute Name" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="PresentCourse" class="col-4 col-form-label">Present Course/Class</label>
         <div class="col-8">
-            <input id="PresentCourse" name="PresentCourse" placeholder="PresentCourse Name" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.PresentCourse" required #PresentCourse="ngModel">
+            <input id="PresentCourse" formControlName="PresentCourse" placeholder="PresentCourse Name" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="PresentCourseYear" class="col-4 col-form-label">Present Course/Class Year</label>
         <div class="col-8">
-            <input id="PresentCourseYear" name="PresentCourseYear" placeholder="PresentCourse Year" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.PresentCourseYear" required #PresentCourseYear="ngModel">
+            <input id="PresentCourseYear" formControlName="PresentCourseYear" placeholder="PresentCourse Year" type="text"
+                class="form-control" >
         </div>
     </div>
 
 
     <div class="form-group row">
         <label for="ModeofStudy" class="col-4 col-form-label">Mode of Study</label>
-    <input type="text" name="ModeofStudy" list="ModeofStudy" placeholder="Mode of Study" [(ngModel)]="SchAppdata.ModeOfStudy"required #ModeOfStudy="ngModel" >
+    <input type="text" formControlName="ModeOfStudy" list="ModeofStudy" placeholder="Mode of Study"  >
     <datalist id="ModeofStudy">
         <option value="Offline">
         <option value="Online">
@@ -86,23 +86,23 @@
     <div class="form-group row">
         <div class="md-form md-outline input-with-post-icon datepicker">
           <label class="col-4">Class Start Date </label>
-          <input placeholder="Class Start Date " type="date" id="ClassStartDate" name="ClassStartDate" class="form-control" [(ngModel)]="SchAppdata.ClassStartDate" #ClassStartDate="ngModel">
+          <input placeholder="Class Start Date " type="date" id="ClassStartDate" formControlName="ClassStartDate" class="form-control">
         </div>
       </div>
 
     <div class="form-group row">
         <label for="Board Name" class="col-4 col-form-label">University/Board Name</label>
         <div class="col-8">
-            <input id="BoardName" name="BoardName" placeholder="Board Name Name" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.UniversityBoardName" required #UniversityBoardName="ngModel">
+            <input id="BoardName" formControlName="UniversityBoardName" placeholder="Board Name Name" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="PreviousCourse" class="col-4 col-form-label">Previous Class/Course</label>
         <div class="col-8">
-            <input id="PreviousCourse" name="PreviousCourse" placeholder="Previous Course" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.PreviousCourse" required #PreviousCourse="ngModel">
+            <input id="PreviousCourse" formControlName="PreviousCourse" placeholder="Previous Course" type="text"
+                class="form-control">
         </div>
     </div>
 
@@ -110,72 +110,72 @@
     <div class="form-group row">
         <label for="PreviousPassingYear" class="col-4 col-form-label">Previous Passing Year</label>
         <div class="col-8">
-            <input id="PreviousPassingYear" name="PreviousPassingYear" placeholder="PreviousPassingYear" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.PreviousPassingYear" required #PreviousPassingYear="ngModel">
+            <input id="PreviousPassingYear" formControlName="PreviousPassingYear" placeholder="PreviousPassingYear" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="PreviousClassPercentage" class="col-4 col-form-label">Previous Class Percentage</label>
         <div class="col-8">
-            <input id="PreviousClassPercentage" name="PreviousClassPercentage" placeholder="PreviousClassPercentage" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.PreviousCoursePercentage" required #PreviousCoursePercentage="ngModel">
+            <input id="PreviousClassPercentage" formControlName="PreviousCoursePercentage" placeholder="PreviousClassPercentage" type="text"
+                class="form-control" >
         </div>
     </div>
     <div class="form-group row">
         <label for="10thRollNo" class="col-4 col-form-label">10th Roll No.</label>
         <div class="col-8">
-            <input id="10th Roll No" name="10th Roll No" placeholder="10th Roll No" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.RollNumber10th" required #RollNumber10th="ngModel">
+            <input id="10th Roll No" formControlName="RollNumber10th" placeholder="10th Roll No" type="text"
+                class="form-control" >
         </div>
     </div>
     <div class="form-group row">
         <label for="BoardName" class="col-4 col-form-label">10th Board Name</label>
         <div class="col-8">
-            <input id="BoardName" name="BoardName" placeholder="10th Board Name" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.BoardName10th" required #BoardName10th="ngModel">
+            <input id="BoardName" formControlName="BoardName10th" placeholder="10th Board Name" type="text"
+                class="form-control" >
         </div>
     </div>
     <div class="form-group row">
         <label for="10thPassingYear" class="col-4 col-form-label">10th Passing Year</label>
         <div class="col-8">
-            <input id="10thPassingYear" name="10thPassingYear" placeholder="10th Passing Year" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.PassingYear10th" required #PassingYear10th="ngModel">
+            <input id="10thPassingYear" formControlName="PassingYear10th" placeholder="10th Passing Year" type="text"
+                class="form-control" >
         </div>
     </div>
     <div class="form-group row">
         <label for="10thPercentageObtained" class="col-4 col-form-label">10th Percentage Obtained</label>
         <div class="col-8">
-            <input id="10thPercentageObtained" name="10thPercentageObtained" placeholder="10th Percentage Obtained" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.Percentage10th" required #Percentage10th="ngModel">
+            <input id="10thPercentageObtained" formControlName="Percentage10th" placeholder="10th Percentage Obtained" type="text"
+                class="form-control" >
         </div>
     </div>
     <div class="form-group row">
         <label for="12thRollNo" class="col-4 col-form-label">12th Roll No.</label>
         <div class="col-8">
-            <input id="12th Roll No" name="12th Roll No" placeholder="12th Roll No" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.RollNumber12th" required #RollNumber12th="ngModel">
+            <input id="12th Roll No" formControlName="RollNumber12th" placeholder="12th Roll No" type="text"
+                class="form-control" >
         </div>
     </div>
     <div class="form-group row">
         <label for="12thBoardName" class="col-4 col-form-label">12th Board Name</label>
         <div class="col-8">
-            <input id="12thBoardName" name="12thBoardName" placeholder="12th Board Name" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.BoardName12th" required #BoardName12th="ngModel">
+            <input id="12thBoardName" formControlName="BoardName12th" placeholder="12th Board Name" type="text"
+                class="form-control" >
         </div>
     </div>
     <div class="form-group row">
         <label for="12thPassingYear" class="col-4 col-form-label">12th Passing Year</label>
         <div class="col-8">
-            <input id="12thPassingYear" name="12thPassingYear" placeholder="12th Passing Year" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.PassingYear12th" required #PassingYear12th="ngModel">
+            <input id="12thPassingYear" formControlName="PassingYear12th" placeholder="12th Passing Year" type="text"
+                class="form-control" >
         </div>
     </div>
     <div class="form-group row">
         <label for="12thPercentageObtained" class="col-4 col-form-label">12th Percentage Obtained</label>
         <div class="col-8">
-            <input id="12thPercentageObtained" name="12thPercentageObtained" placeholder="12th Percentage Obtained" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.Percentage12th" required #Percentage12th="ngModel">
+            <input id="12thPercentageObtained" formControlName="Percentage12th" placeholder="12th Percentage Obtained" type="text"
+                class="form-control" >
         </div>
     </div>
 
@@ -185,8 +185,8 @@
     <div class="form-group row">
         <label for="AdmissionFee" class="col-4 col-form-label">Admission Fee</label>
         <div class="col-8">
-            <input id="AdmissionFee" name="AdmissionFee" placeholder="Admission Fee" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.AdmissionFee" required #AdmissionFee="ngModel">
+            <input id="AdmissionFee" formControlName="AdmissionFee" placeholder="Admission Fee" type="text"
+                class="form-control" >
         </div>
     </div>
 
@@ -194,22 +194,22 @@
     <div class="form-group row">
         <label for="TuitionFee" class="col-4 col-form-label">Tuition Fee</label>
         <div class="col-8">
-            <input id="TuitionFee" name="TuitionFee" placeholder="Tuition Fee" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.TuitionFee" required #TuitionFee="ngModel">
+            <input id="TuitionFee" formControlName="TuitionFee" placeholder="Tuition Fee" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="OtherFee" class="col-4 col-form-label">Other Fee</label>
         <div class="col-8">
-            <input id="OtherFee" name="OtherFee" placeholder="Other Fee" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.OtherFee" required #OtherFee="ngModel">
+            <input id="OtherFee" formControlName="OtherFee" placeholder="Other Fee" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="IsDisabled" class="col-4 col-form-label">Is Disabled</label>
-    <input type="text" name="IsDisabled" list="IsDisabled" placeholder="" [(ngModel)]="SchAppdata.IsDisabled" required #IsDisabled="ngModel">
+    <input type="text" formControlName="IsDisabled" list="IsDisabled" placeholder="" >
     <datalist id="IsDisabled">
         <option value="Yes">
         <option value="No">
@@ -219,22 +219,22 @@
     <div class="form-group row">
         <label for="DisabilityType" class="col-4 col-form-label">Type of Disability </label>
         <div class="col-8">
-            <input id="DisabilityType" name="DisabilityType" placeholder="DisabilityType" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.DisabilityType" required #DisabilityType="ngModel">
+            <input id="DisabilityType" formControlName="DisabilityType" placeholder="DisabilityType" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="DisabilityPercentage" class="col-4 col-form-label">Percentage of Disability </label>
         <div class="col-8">
-            <input id="DisabilityPercentage" name="DisabilityPercentage" placeholder="DisabilityPercentage" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.DisabilityPercentage" required #DisabilityPercentage="ngModel">
+            <input id="DisabilityPercentage" formControlName="DisabilityPercentage" placeholder="DisabilityPercentage" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="MaritalStatus" class="col-4 col-form-label">Marital Status</label>
-    <input type="text" name="MaritalStatus" list="MaritalStatus" placeholder="" [(ngModel)]="SchAppdata.MaritalStatus" required #MaritalStatus="ngModel">
+    <input type="text" formControlName="MaritalStatus" list="MaritalStatus" placeholder="" >
     <datalist id="MaritalStatus">
         <option value="Single">
         <option value="Married">
@@ -247,23 +247,23 @@
     <div class="form-group row">
         <label for="ParentsProfession" class="col-4 col-form-label">Parents Profession</label>
         <div class="col-8">
-            <input id="ParentsProfession" name="ParentsProfession" placeholder="Parents Profession" type="text" class="form-control"
-                [(ngModel)]="SchAppdata.ParentsProfession" required #ParentsProfession="ngModel">
+            <input id="ParentsProfession" formControlName="ParentsProfession" placeholder="Parents Profession" type="text" class="form-control"
+                >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="State" class="col-4 col-form-label">State</label>
         <div class="col-8">
-            <input id="State" name="State" placeholder="Maharashtra" type="text" class="form-control"
-                [(ngModel)]="SchAppdata.State" required #State="ngModel">
+            <input id="State" formControlName="State" placeholder="Maharashtra" type="text" class="form-control"
+                >
         </div>
     </div>
     <div class="form-group row">
         <label for="District" class="col-4 col-form-label">District</label>
         <div class="col-8">
-            <input id="District" name="Disctrict" placeholder="Disctrict" type="text" class="form-control"
-                [(ngModel)]="SchAppdata.District" required #District="ngModel">
+            <input id="District" formControlName="District" placeholder="Disctrict" type="text" class="form-control"
+                >
         </div>
     </div>
 
@@ -271,16 +271,16 @@
     <div class="form-group row">
         <label for="Address" class="col-4 col-form-label">Address</label>
         <div class="col-8">
-            <input id="Address" name="Address" placeholder="Address" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.Address" required #Address="ngModel">
+            <input id="Address" formControlName="Address" placeholder="Address" type="text"
+                class="form-control" >
         </div>
     </div>
 
     <div class="form-group row">
         <label for="Pincode" class="col-4 col-form-label">Pincode</label>
         <div class="col-8">
-            <input id="Pincode" name="Pincode" placeholder="Pincode" type="text"
-                class="form-control" [(ngModel)]="SchAppdata.Pincode" required #Pincode="ngModel">
+            <input id="Pincode" formControlName="Pincode" placeholder="Pincode" type="text"
+                class="form-control" >
         </div>
     </div>
 
@@ -297,7 +297,7 @@
   --> 
   <div class="form-group">
     <label for="ScholarshipId">Select Scholarship:</label>
-    <select class="form-control" name="ScholarshipId" id="ScholarshipId"  placeholder="" [(ngModel)]="SchAppdata.ScholarshipId" required #ScholarshipId="ngModel">
+    <select class="form-control" formControlName="ScholarshipId" id="ScholarshipId" >
         <option value="1">Post Matric Scholarship</option>
         <option value="2">Pragati Scholarship</option>
         <option value="3">Merit Based Scholarship</option>
@@ -314,13 +314,13 @@
     <div class="button-parent">
         <div class="child form-group row">
             <div class="offset-4 col-8">
-                <button name="Register" type="submit" class="btn btn-primary">Register</button>
+                <button  type="submit" class="btn btn-primary">Register</button>
             </div>
         </div>
 
         <div class="child form-group row">
             <div class="offset-4 col-8">
-                <button name="reset" type="reset" class="btn btn-primary">Reset</button>
+                <button  type="reset" class="btn btn-primary">Reset</button>
             </div>
         </div>
     </div>

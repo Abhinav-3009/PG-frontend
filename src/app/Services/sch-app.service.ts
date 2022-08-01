@@ -12,8 +12,8 @@ url='http://localhost:21856/api/ScholarshipApplication/';
 httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})};
   constructor(private httpclient:HttpClient) { }
 
-  addSchApplication(SchApplication:SchApplication):Observable<SchApplication>{
-    return this.httpclient.post<SchApplication>(this.url + 'AddScholarshipApplication' ,SchApplication , this.httpOptions)
+  addSchApplication(SchApplication:any):Observable<any>{
+    return this.httpclient.post<any>(this.url + 'AddScholarshipApplication' ,SchApplication , this.httpOptions)
   }
 
   getSchApplication(id:number):Observable<any>{
