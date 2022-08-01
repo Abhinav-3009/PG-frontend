@@ -14,4 +14,9 @@ export class ScholarshipapplicationService {
     console.log("inside service"+id)
     return this.httpclient.get<Iapplicatioforinstitute>(this.url+'ScholarshipForInstitute/'+id)
   }
+  verifyapplication(id:number):Observable<any>{
+    console.log("inside service"+id)
+    const body = {appid:id}
+    return this.httpclient.put<any>(this.url+'ApproveByInstitute/'+id,body)
+  }
 }
