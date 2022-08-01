@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SchApplication } from '../sch-application';
+import { IApplication } from '../iapplication';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,6 @@ httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})};
   }
 
   getSchApplication(id:number):Observable<any>{
-    return this.httpclient.get<any>(this.url + 'FindScholarshipApplication/'+id)
+    return this.httpclient.get<IApplication>(this.url + 'FindScholarshipApplication/'+id)
   }
 }
