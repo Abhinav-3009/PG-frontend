@@ -16,8 +16,9 @@ import { InstituteService } from '../Services/institute.service';
   styleUrls: ['./institute-registration.component.css']
 })
 export class InstituteRegistrationComponent implements OnInit {
-  //@ts-ignore
+
   institutedata:IInstituteregister={
+    
     instituteCategory:"",
     name:"",
     institutecode:0,

@@ -27,6 +27,13 @@ export class InstituteStudentApplicationsComponent implements OnInit {
       console.log(data)
     })
   }
+
+  rejectapplication(id:number):void{
+    console.log("message"+id)
+    this.applicationservice.declineapplication(id).subscribe((data:any)=>{
+      console.log(data)
+    })
+  }
   ngOnInit(): void {
     const tid = this.ActivatedRoute.snapshot.paramMap.get('id')
     this.applicationId = Number(tid);

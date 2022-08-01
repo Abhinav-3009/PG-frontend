@@ -11,7 +11,7 @@ import { SchAppService } from '../Services/sch-app.service';
 export class ScholarshipApplicationComponent implements OnInit {
 SchAppdata:SchApplication={
   StudentId:0,
-  InstituteId:6,
+  InstituteId:3,
   Religion:'',
     Community:'',
     Fathername:'',
