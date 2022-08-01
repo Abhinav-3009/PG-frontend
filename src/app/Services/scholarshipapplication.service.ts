@@ -19,4 +19,10 @@ export class ScholarshipapplicationService {
     const body = {appid:id}
     return this.httpclient.put<any>(this.url+'ApproveByInstitute/'+id,body)
   }
+
+  declineapplication(id:number):Observable<any>{
+    console.log("inside service"+id)
+    const body = {appid:id}
+    return this.httpclient.put<any>(this.url+'RejectByInstitute/'+id,body)
+  }
 }

@@ -1,0 +1,13 @@
+<div class="container login">
+    <form [formGroup]="nodalloginForm" (ngSubmit)="onFormSubmit()">
+        <p>ID: <input formControlName="ID">
+            <br /><label *ngIf="nodalloginForm.get('ID')?.invalid && nodalloginForm.get('ID')?.dirty" class="error">
+                Ministry Id 
+                is required. </label>
+        </p>
+        <p> Password : <input type="password" formControlName="Password"></p>
+        <button routerLink="/Ministry" [disabled]="nodalloginForm.invalid">SUBMIT</button>
+    </form>
+</div>
+
+<div *ngIf="formSubmitted " class="submitted"> Form submitted successfully. </div>

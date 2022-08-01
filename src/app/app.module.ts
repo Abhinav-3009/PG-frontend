@@ -20,6 +20,12 @@ import { InstituteStudentApplicationsComponent } from './institute-student-appli
 
 import { HttpClientModule } from '@angular/common/http';
 import { ApplicationsForInstituteComponent } from './applications-for-institute/applications-for-institute.component';
+import { NodalOfficerComponent } from './nodal-officer/nodal-officer.component';
+import { MinistryComponent } from './ministry/ministry.component';
+import { NodalLoginComponent } from './nodal-login/nodal-login.component';
+import { MinistryLoginComponent } from './ministry-login/ministry-login.component';
+import { NodalSchDetailsComponent } from './nodal-sch-details/nodal-sch-details.component';
+import { NodalInsDetailsComponent } from './nodal-ins-details/nodal-ins-details.component';
 
 
 
@@ -37,7 +43,13 @@ import { ApplicationsForInstituteComponent } from './applications-for-institute/
     InstituteHomeComponent,
     ScholarshipApplicationComponent,
     InstituteStudentApplicationsComponent,
-    ApplicationsForInstituteComponent
+    ApplicationsForInstituteComponent,
+    NodalOfficerComponent,
+    MinistryComponent,
+    NodalLoginComponent,
+    MinistryLoginComponent,
+    NodalSchDetailsComponent,
+    NodalInsDetailsComponent
   ],
   imports: [
     BrowserModule,
