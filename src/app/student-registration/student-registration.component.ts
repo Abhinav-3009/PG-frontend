@@ -18,24 +18,49 @@ import { StudentService } from '../Services/student.service';
   styleUrls: ['./student-registration.component.css']
 })
 export class StudentRegistrationComponent implements OnInit {
-  studentId:number = 0
-  studentdata:IStudent={name:'',dob:new Date(),gender:'',mobileNumber:'',email:'',instituteCode:0,aadhaar:'',accountNo:'',bankIFSC:'',bankName:'',password:''}
-  constructor(private studentservice:StudentService, private router:Router){}
+  studentregistrationform = {} as FormGroup
+  formSubmitted = false
+  studentId: number = 0
+  studentdata: IStudent = { name: '', dob: new Date(), gender: '', mobileNumber: '', email: '', instituteCode: 0, aadhaar: '', accountNo: '', bankIFSC: '', bankName: '', password: '' }
+  constructor(private formBuilder: FormBuilder, private studentservice: StudentService, private router: Router) { }
 
-  saveStudent(student:IStudent)
-  {
+  // saveStudent(student: IStudent) {
 
-    this.studentdata=student;
-    this.studentservice.addStudent(this.studentdata).subscribe((d)=>
-    {
-      this.studentId=d
-      alert("Student Registration successfull. Your Id is " + this.studentId)
-      this.router.navigate(['/Home'])
+  //   this.studentdata = student;
+  //   this.studentservice.addStudent(this.studentdata).subscribe((d) => {
+  //     this.studentId = d
+  //     alert("Student Registration successfull. Your Id is " + this.studentId)
+  //     this.router.navigate(['/Home'])
+  //   })
+
+  // }
+
+  saveStudent(){
+    console.log(this.studentregistrationform.value)
+    this.studentservice.addStudent(this.studentregistrationform.value).subscribe((d)=>{
+      console.log("service working")
+      console.log(d)
     })
-
-  }
-
-  ngOnInit(): void {
     
   }
+  ngOnInit(): void {
+    this.createform();
+  }
+  createform(){
+    this.studentregistrationform = this.formBuilder.group({
+      name: ['',Validators.required],
+      dob: [new Date(),Validators.required],
+      gender: ['',Validators.required],
+      mobileNumber: [0,Validators.required],
+      email: ['',Validators.required],
+      instituteCode: [0,Validators.required],
+      aadhaar: ['',Validators.required], 
+      bankName: ['',Validators.required], 
+      accountNo: ['',Validators.required], 
+      bankIFSC: ['',Validators.required], 
+      password: ['',Validators.required]
+    })
+  }
 }
+
+
