@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IInstitute } from '../iinstitute';
+import { IInstituteregister } from '../iinstituteregister';
 import { InstituteService } from '../Services/institute.service';
 
 @Component({
@@ -16,15 +17,34 @@ import { InstituteService } from '../Services/institute.service';
 })
 export class InstituteRegistrationComponent implements OnInit {
   //@ts-ignore
-  institutedata:IInstitute
+  institutedata:IInstituteregister={
+    instituteCategory:"",
+    name:"",
+    institutecode:0,
+    disecode:0,
+    location:"",
+    instituteType:"",
+    affiliatedState:"",
+    affiliatedName:"",
+    admissionStartYear:"",
+    password:"",
+    address:"",
+    city:"",
+    state:"",
+    district:"",
+    pincode:0,
+    principalName:"",
+    principalNumber:""
+  }
 
   constructor(private instituteservice:InstituteService,private router:Router) { }
 
-  saveInstitute(institute:IInstitute)
+  saveInstitute(institute:IInstituteregister)
   {
     this.institutedata=institute;
-    this.instituteservice.addInstitute(this.institutedata).subscribe(()=>
+    this.instituteservice.addInstitute(this.institutedata).subscribe((data)=>
     {
+      console.log(data)
       console.log(this.institutedata)
       alert("Institute Registration Successfull")
       this.router.navigate(['/Home'])
