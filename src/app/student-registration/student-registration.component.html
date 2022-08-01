@@ -1,22 +1,7 @@
 <h1>STUDENT REGISTRATION</h1>
 
-<form class="container" (ngSubmit)="saveStudent(studentdata)" #studentRegistrationForm="ngForm">
- 
-  <!--
-  <div class="form-group row">
-    <label class="col-4 col-form-label" for="StateOfDomicile">State Of Domicile</label> 
-    <div class="col-8">
-      <input id="StateOfDomicile" name="StateOfDomicile" placeholder="State of Domicile" type="text" class="form-control" required="required">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="District" class="col-4 col-form-label">Disctrict</label> 
-    <div class="col-8">
-      <input id="District" name="District" placeholder="District" type="text" class="form-control" required="required">
-    </div>
-  </div>
+<!-- <form class="container" (ngSubmit)="saveStudent(studentdata)" #studentRegistrationForm="ngForm">
 
-  -->
   <div class="form-group row">
     <label for="Name" class="col-4 col-form-label">Name</label> 
     <div class="col-8">
@@ -124,4 +109,129 @@
   </div>
 
 </div>
+</form> -->
+
+
+
+
+
+
+<!-- ================================== -->
+
+<form class="container" [formGroup]="studentregistrationform" (ngSubmit)="saveStudent()">
+
+  <div class="form-group row">
+    <label for="Name" class="col-4 col-form-label">Name</label>
+    <div class="col-8">
+      <input placeholder="Name(As per MarkSheet)" type="text" class="form-control" formControlName="name">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="md-form md-outline input-with-post-icon datepicker">
+      <label class="col-4">Date Of Birth</label>
+      <input placeholder="Select date" type="date" class="form-control" formControlName="dob">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <div>
+      <input id="male" type="radio" value="male" name="gender" formControlName="gender">
+      <label for="male">Male</label>
+    </div>
+
+    <div>
+      <input id="female" type="radio" value="female" name="gender" formControlName="gender">
+      <label for="female">Female</label>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label for="MobileNumber" class="col-4 col-form-label">Mobile Number</label>
+    <div class="col-8">
+      <input id="MobileNumber" name="MobileNumber" placeholder="1234567890" type="text" class="form-control"
+        formControlName="mobileNumber">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="EmailAddress">Email address</label>
+    <input type="email" class="form-control" id="EmailAddress" name="email" placeholder="abcd@gmail.com"
+    formControlName="email">
+  </div>
+
+  <div class="form-group row">
+    <label for="Institute Code" class="col-4 col-form-label">Institute Code</label>
+    <div class="col-8">
+      <input id="Institute Code" name="Institute Code" placeholder="12345" type="number" class="form-control"
+      formControlName="instituteCode">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="AadharNumber" class="col-4 col-form-label">Aadhar Number</label>
+    <div class="col-8">
+      <input id="AadharNumber" name="AadharNumber" placeholder="1234 1234 1234" type="text" class="form-control"
+      formControlName="aadhaar">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="IFSCCODE" class="col-4 col-form-label">Bank IFSC Code</label>
+    <div class="col-8">
+      <input id="IFSCCODE" name="IFSCCODE" placeholder="ABCDE123456" type="text" class="form-control" 
+      formControlName="bankIFSC">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="BankAccNo" class="col-4 col-form-label">Bank Account No.</label>
+    <div class="col-8">
+      <input id="BankAccNo" name="BankAccNo" placeholder="1234567890" type="text" class="form-control" 
+      formControlName="accountNo">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="BankName" class="col-4 col-form-label">Bank Name</label>
+    <div class="col-8">
+      <input id="BankName" name="BankName" placeholder="SBI, PNB , etc" type="text" class="form-control" 
+      formControlName="bankName">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="SetPassword" class="col-4 col-form-label">Set Password</label>
+    <div class="col-8">
+      <input id="SetPassword" name="SetPassword" placeholder="abcd@123" type="text"  class="form-control"
+      formControlName="password">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="ConfirmPassword" class="col-4 col-form-label">Confirm Password</label>
+    <div class="col-8">
+      <input id="ConfirmPassword" name="ConfirmPassword" placeholder="**********" type="text" class="form-control"
+        required>
+    </div>
+  </div>
+
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1"> All the above Information furnished by me is true to the best
+      of my knowledge</label>
+  </div>
+
+  <div class="button-parent">
+    <div class="child form-group row">
+      <div class="offset-4 col-8">
+        <button name="Register" type="submit" class="btn btn-primary"
+        >Register</button>
+      </div>
+    </div>
+
+    <div class="child form-group row">
+      <div class="offset-4 col-8">
+        <button [disabled]="studentregistrationform.invalid" name="reset" type="reset" class="btn btn-primary">Reset</button>
+      </div>
+    </div>
+
+  </div>
 </form>
