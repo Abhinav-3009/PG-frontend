@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders,HttpErrorResponse } from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IInstitute } from '../iinstitute';
+import { IInstituteregister } from '../iinstituteregister';
 import { IInstituteLogin } from '../iinstitute-login';
 import { catchError,throwError } from 'rxjs';
 
@@ -14,8 +15,8 @@ export class InstituteService {
   httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})};
   constructor(private httpclient:HttpClient) { }
 
-  addInstitute(institute:IInstitute):Observable<any>{
-    return this.httpclient.post<IInstitute>(this.url + 'AddInstitute' ,institute , this.httpOptions)
+  addInstitute(institute:IInstituteregister):Observable<any>{
+    return this.httpclient.post<IInstituteregister>(this.url + 'AddInstitute' ,institute , this.httpOptions)
   }
 
   checkInstitute(login:IInstituteLogin):Observable<any>{

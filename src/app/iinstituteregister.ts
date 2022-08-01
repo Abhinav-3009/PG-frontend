@@ -1,5 +1,4 @@
-export interface IInstitute {
-    instituteId:number
+export interface IInstituteregister {
     instituteCategory:string
     name:string
     institutecode:number
@@ -18,4 +17,3 @@ export interface IInstitute {
     principalName:string
     principalNumber:string
 }
-
