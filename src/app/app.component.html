@@ -1,25 +1,57 @@
-
-<div style="color: rgb(172, 47, 47);text-align: center;">
-  <h2>National Scholarship Portal</h2>
-  Government Of India
-</div>
-<nav class="navbar navbar-inverse" style="background-color: rgb(11,0,51)">
-  <div class="container-fluid">
-    
-    <ul class="nav navbar-nav">
-      <li><a routerLink="Home" >Home</a></li>
-      <li><a routerLink="AboutUs">About Us</a></li>
-      <li><a routerLink="ContactUs">Contact Us</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-        <li><a routerLink="NodalLogin"><span class="glyphicon glyphicon-user"></span>Nodal Officer Login</a></li>
-        
-        <li><a routerLink="MinistryLogin"><span class="glyphicon glyphicon-user"></span>Ministry Login</a></li>
-      
-    </ul>
+<body>
+  <div class="lead" style="color: #ff495c; text-align: center">
+    <img
+      class="img-fluid"
+      style="width: 5%"
+      src="https://cdn-icons-png.flaticon.com/512/201/201614.png"
+      alt="Avatar"
+    />
+    <h1>National Scholarship Portal</h1>
+    Government Of India
   </div>
-</nav>
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary lead">
+    <a class="navbar-brand" routerLink="Home">
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/553/553416.png"
+        width="35"
+        height="35"
+        alt=""
+      />
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="AboutUs">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="ContactUs">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Login
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item lead" routerLink="NodalLogin"
+              >Nodal Officer</a
+            >
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item lead" routerLink="MinistryLogin"
+              >Ministry</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
 
 <router-outlet></router-outlet>
-
