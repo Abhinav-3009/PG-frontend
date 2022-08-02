@@ -1,9 +1,10 @@
 <br />
 <br />
-<h1 class="display-4 text-center">Nodal Officer Login</h1>
-<br />
-<br />
-<div class="container login">
+<div class="card login" style="margin: auto 200px">
+  <br />
+  <h1 class="display-4 text-center">Nodal Officer Login</h1>
+  <br />
+  <br />
   <div class="row justify-content-center align-items-center">
     <form [formGroup]="nodalloginForm" (ngSubmit)="onFormSubmit()">
       <div class="form-group">
@@ -34,7 +35,7 @@
       </div>
       <br />
       <br />
-      <div class="form-group">
+      <div class="form-group text-center">
         <button
           routerLink="/NodalOfficer"
           [disabled]="nodalloginForm.invalid"

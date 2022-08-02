@@ -1,7 +1,9 @@
 .card-custom {
   overflow: hidden;
   min-height: 450px;
-  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  box-shadow: 0 0 20px #0b0033;
+  margin: 50px 100px;
+  border-radius: 20px;
 }
 
 .card-custom-img {

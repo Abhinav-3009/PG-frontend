@@ -1,10 +1,7 @@
-.mainstudenthome{
-    display: flex;
-}
-.mrgn-rt{
-    width: 50%;
+.mainstudenthome {
+  display: flex;
 }
 
-.r1{
-    margin-bottom: 10px;
+.card {
+  padding: 50px;
 }

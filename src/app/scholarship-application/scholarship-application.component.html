@@ -3,7 +3,13 @@
 <br />
 <hr />
 <br />
-<form class="container" [formGroup]="applicationform" (ngSubmit)="saveSchApp()">
+<form
+  class="container lead"
+  [formGroup]="applicationform"
+  (ngSubmit)="saveSchApp()"
+>
+  <h3>Personal Details</h3>
+  <hr />
   <div class="form-group row">
     <label for="Religion" class="col-4 col-form-label">Religion</label>
     <div class="col-4">
@@ -37,8 +43,15 @@
         class="form-control"
         formControlName="Community"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['Community'].errors!['required']" class="danger">Community Name
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['Community'].errors!['required']
+        "
+        class="danger"
+      >
+        Community Name is required
+      </div>
     </div>
   </div>
 
@@ -52,8 +65,15 @@
         class="form-control"
         formControlName="Fathername"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['Fathername'].errors!['required']" class="danger">Father Name
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['Fathername'].errors!['required']
+        "
+        class="danger"
+      >
+        Father Name is required
+      </div>
     </div>
   </div>
 
@@ -68,8 +88,15 @@
         class="form-control"
         formControlName="Mothername"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['Mothername'].errors!['required']" class="danger">Mother Name
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['Mothername'].errors!['required']
+        "
+        class="danger"
+      >
+        Mother Name is required
+      </div>
     </div>
   </div>
 
@@ -101,8 +128,16 @@
         placeholder="Institute Name"
         type="text"
         class="form-control"
-      /><div *ngIf="formSubmitted && applicationform.controls['InstituteName'].errors!['required']" class="danger">Institute Name
-        is required</div>
+      />
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['InstituteName'].errors!['required']
+        "
+        class="danger"
+      >
+        Institute Name is required
+      </div>
     </div>
   </div>
 
@@ -118,8 +153,15 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['PresentCourse'].errors!['required']" class="danger">Field
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['PresentCourse'].errors!['required']
+        "
+        class="danger"
+      >
+        Field is required
+      </div>
     </div>
   </div>
 
@@ -135,8 +177,15 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['PresentCourseYear'].errors!['required']" class="danger">Field
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['PresentCourseYear'].errors!['required']
+        "
+        class="danger"
+      >
+        Field is required
+      </div>
     </div>
   </div>
 
@@ -149,8 +198,15 @@
         list="ModeofStudy"
         placeholder="Enter Mode of Study"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['ModeOfStudy'].errors!['required']" class="danger">Field
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['ModeOfStudy'].errors!['required']
+        "
+        class="danger"
+      >
+        Field is required
+      </div>
       <datalist id="ModeofStudy">
         <option value="Offline"></option>
         <option value="Online"></option>
@@ -185,8 +241,15 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['UniversityBoardName'].errors!['required']" class="danger">Board Name
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['UniversityBoardName'].errors!['required']
+        "
+        class="danger"
+      >
+        Board Name is required
+      </div>
     </div>
   </div>
 
@@ -202,8 +265,15 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['PreviousCourse'].errors!['required']" class="danger">Field
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['PreviousCourse'].errors!['required']
+        "
+        class="danger"
+      >
+        Field is required
+      </div>
     </div>
   </div>
 
@@ -219,8 +289,15 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['PreviousPassingYear'].errors!['required']" class="danger">Field
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['PreviousPassingYear'].errors!['required']
+        "
+        class="danger"
+      >
+        Field is required
+      </div>
     </div>
   </div>
 
@@ -232,7 +309,7 @@
       <input
         id="PreviousClassPercentage"
         formControlName="PreviousCoursePercentage"
-        placeholder="Enter percentage"
+        placeholder="12th % Obtained"
         type="number"
         class="form-control"
       />
@@ -245,7 +322,7 @@
   <hr />
   <div class="form-group row">
     <label for="10thRollNo" class="col-4 col-form-label">10th Roll No.</label>
-    <div class="col-2">
+    <div class="col-4">
       <input
         id="10th Roll No"
         formControlName="RollNumber10th"
@@ -267,15 +344,22 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['BoardName10th'].errors!['required']" class="danger">10th board number
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['BoardName10th'].errors!['required']
+        "
+        class="danger"
+      >
+        10th board number is required
+      </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="10thPassingYear" class="col-4 col-form-label"
       >10th Passing Year</label
     >
-    <div class="col-8">
+    <div class="col-2">
       <input
         id="10thPassingYear"
         formControlName="PassingYear10th"
@@ -283,19 +367,26 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['PassingYear10th'].errors!['required']" class="danger">10th passing year
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['PassingYear10th'].errors!['required']
+        "
+        class="danger"
+      >
+        10th passing year is required
+      </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="10thPercentageObtained" class="col-4 col-form-label"
-      >10th Percentage Obtained</label
+      >10th % Obtained</label
     >
-    <div class="col-8">
+    <div class="col-2">
       <input
         id="10thPercentageObtained"
         formControlName="Percentage10th"
-        placeholder="10th Percentage Obtained"
+        placeholder="10th % Obtained"
         type="text"
         class="form-control"
       />
@@ -303,9 +394,12 @@
         is required</div> -->
     </div>
   </div>
+  <br />
+  <h3>12th Class Details</h3>
+  <hr />
   <div class="form-group row">
     <label for="12thRollNo" class="col-4 col-form-label">12th Roll No.</label>
-    <div class="col-8">
+    <div class="col-4">
       <input
         id="12th Roll No"
         formControlName="RollNumber12th"
@@ -329,15 +423,22 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['BoardName12th'].errors!['required']" class="danger">12th board name
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['BoardName12th'].errors!['required']
+        "
+        class="danger"
+      >
+        12th board name is required
+      </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="12thPassingYear" class="col-4 col-form-label"
       >12th Passing Year</label
     >
-    <div class="col-8">
+    <div class="col-2">
       <input
         id="12thPassingYear"
         formControlName="PassingYear12th"
@@ -345,15 +446,22 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['PassingYear12th'].errors!['required']" class="danger">Field
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['PassingYear12th'].errors!['required']
+        "
+        class="danger"
+      >
+        Field is required
+      </div>
     </div>
   </div>
   <div class="form-group row">
     <label for="12thPercentageObtained" class="col-4 col-form-label"
-      >12th Percentage Obtained</label
+      >12th % Obtained</label
     >
-    <div class="col-8">
+    <div class="col-2">
       <input
         id="12thPercentageObtained"
         formControlName="Percentage12th"
@@ -365,10 +473,12 @@
         is required</div> -->
     </div>
   </div>
-
+  <br />
+  <h3>Fee Structure</h3>
+  <hr />
   <div class="form-group row">
     <label for="AdmissionFee" class="col-4 col-form-label">Admission Fee</label>
-    <div class="col-8">
+    <div class="col-4">
       <input
         id="AdmissionFee"
         formControlName="AdmissionFee"
@@ -383,7 +493,7 @@
 
   <div class="form-group row">
     <label for="TuitionFee" class="col-4 col-form-label">Tuition Fee</label>
-    <div class="col-8">
+    <div class="col-4">
       <input
         id="TuitionFee"
         formControlName="TuitionFee"
@@ -398,7 +508,7 @@
 
   <div class="form-group row">
     <label for="OtherFee" class="col-4 col-form-label">Other Fee</label>
-    <div class="col-8">
+    <div class="col-4">
       <input
         id="OtherFee"
         formControlName="OtherFee"
@@ -410,19 +520,23 @@
         is required</div> -->
     </div>
   </div>
-
+  <br />
+  <h3>Other Details</h3>
+  <hr />
   <div class="form-group row">
     <label for="IsDisabled" class="col-4 col-form-label">Is Disabled</label>
-    <input
-      type="text"
-      formControlName="IsDisabled"
-      list="IsDisabled"
-      placeholder=""
-    />
-    <datalist id="IsDisabled">
-      <option value="Yes"></option>
-      <option value="No"></option>
-    </datalist>
+    <div class="col-4">
+      <input
+        type="text"
+        formControlName="IsDisabled"
+        list="IsDisabled"
+        placeholder=""
+      />
+      <datalist id="IsDisabled">
+        <option value="Yes"></option>
+        <option value="No"></option>
+      </datalist>
+    </div>
   </div>
 
   <div class="form-group row">
@@ -437,8 +551,15 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['DisabilityType'].errors!['required']" class="danger">Disablity Type
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['DisabilityType'].errors!['required']
+        "
+        class="danger"
+      >
+        Disablity Type is required
+      </div>
     </div>
   </div>
 
@@ -446,11 +567,11 @@
     <label for="DisabilityPercentage" class="col-4 col-form-label"
       >Percentage of Disability
     </label>
-    <div class="col-8">
+    <div class="col-2">
       <input
         id="DisabilityPercentage"
         formControlName="DisabilityPercentage"
-        placeholder="DisabilityPercentage"
+        placeholder="Disability %"
         type="text"
         class="form-control"
       />
@@ -463,21 +584,30 @@
     <label for="MaritalStatus" class="col-4 col-form-label"
       >Marital Status</label
     >
-    <input
-      type="text"
-      formControlName="MaritalStatus"
-      list="MaritalStatus"
-      placeholder=""
-    />
-    <div *ngIf="formSubmitted && applicationform.controls['MaritalStatus'].errors!['required']" class="danger">Marital status
-      is required</div>
-    <datalist id="MaritalStatus">
-      <option value="Single"></option>
-      <option value="Married"></option>
-      <option value="Widowed"></option>
-      <option value="Seperated"></option>
-      <option value="Divorced"></option>
-    </datalist>
+    <div class="col-4">
+      <input
+        type="text"
+        formControlName="MaritalStatus"
+        list="MaritalStatus"
+        placeholder=""
+      />
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['MaritalStatus'].errors!['required']
+        "
+        class="danger"
+      >
+        Marital status is required
+      </div>
+      <datalist id="MaritalStatus">
+        <option value="Single"></option>
+        <option value="Married"></option>
+        <option value="Widowed"></option>
+        <option value="Seperated"></option>
+        <option value="Divorced"></option>
+      </datalist>
+    </div>
   </div>
 
   <div class="form-group row">
@@ -492,8 +622,15 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['ParentsProfession'].errors!['required']" class="danger">Parents profession
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['ParentsProfession'].errors!['required']
+        "
+        class="danger"
+      >
+        Parents profession is required
+      </div>
     </div>
   </div>
 
@@ -507,8 +644,14 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['State'].errors!['required']" class="danger">State
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted && applicationform.controls['State'].errors!['required']
+        "
+        class="danger"
+      >
+        State is required
+      </div>
     </div>
   </div>
   <div class="form-group row">
@@ -521,29 +664,45 @@
         type="text"
         class="form-control"
       />
-      <div *ngIf="formSubmitted && applicationform.controls['District'].errors!['required']" class="danger">District
-        is required</div>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['District'].errors!['required']
+        "
+        class="danger"
+      >
+        District is required
+      </div>
     </div>
   </div>
 
   <div class="form-group row">
     <label for="Address" class="col-4 col-form-label">Address</label>
     <div class="col-8">
-      <input
+      <textarea
         id="Address"
         formControlName="Address"
         placeholder="Address"
         type="text"
         class="form-control"
-      />
-      <div *ngIf="formSubmitted && applicationform.controls['Address'].errors!['required']" class="danger">Address
-        is required</div>
+        rows="4"
+      >
+      </textarea>
+      <div
+        *ngIf="
+          formSubmitted &&
+          applicationform.controls['Address'].errors!['required']
+        "
+        class="danger"
+      >
+        Address is required
+      </div>
     </div>
   </div>
 
   <div class="form-group row">
     <label for="Pincode" class="col-4 col-form-label">Pincode</label>
-    <div class="col-8">
+    <div class="col-2">
       <input
         id="Pincode"
         formControlName="Pincode"
@@ -555,33 +714,28 @@
         is required</div> -->
     </div>
   </div>
-
-  <h3>SCHOLARSHIP</h3>
-  <!--<div class="form-group row">
-      <label for="ScholarshipName" class="col-4 col-form-label">Select Scholarship:</label>
-  <input type="number" name="ScholarshipName" list="ScholarshipName" placeholder="" [(ngModel)]="SchAppdata.ScholarshipId" required #ScholarshipId="ngModel">
-  <datalist id="ScholarshipName">
-      <option value="1">Post Matric Scholarship</option>
+  <br />
+  <hr />
+  <br />
+  <div class="card" style="padding: 50px">
+    <h3>Choose The Scholarship:</h3>
+    <div class="form-group">
+      <label for="ScholarshipId"></label>
+      <select
+        class="form-control"
+        formControlName="ScholarshipId"
+        id="ScholarshipId"
+      >
+        <option value="1">Post Matric Scholarship</option>
         <option value="2">Pragati Scholarship</option>
         <option value="3">Merit Based Scholarship</option>
-  </datalist>
-  </div>
-  -->
-  <div class="form-group">
-    <label for="ScholarshipId">Select Scholarship:</label>
-    <select
-      class="form-control"
-      formControlName="ScholarshipId"
-      id="ScholarshipId"
-    >
-      <option value="1">Post Matric Scholarship</option>
-      <option value="2">Pragati Scholarship</option>
-      <option value="3">Merit Based Scholarship</option>
-    </select>
-    <!-- <div *ngIf="formSubmitted && applicationform.controls['ScholarshipId'].errors!['required']" class="danger">Choosing a scholarship
+      </select>
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['ScholarshipId'].errors!['required']" class="danger">Choosing a scholarship
       is required</div> -->
+    </div>
   </div>
-
+  <br />
+  <br />
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
     <label class="form-check-label" for="exampleCheck1">
@@ -591,7 +745,7 @@
       Government</label
     >
   </div>
-
+  <br />
   <div class="button-parent">
     <div class="child form-group row">
       <div class="offset-4 col-8">

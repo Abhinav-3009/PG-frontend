@@ -1,9 +1,10 @@
 <br />
 <br />
-<h1 class="display-4 text-center">Ministry Login</h1>
-<br />
-<br />
-<div class="container login">
+<div class="card login" style="margin: auto 200px">
+  <br />
+  <h1 class="display-4 text-center">Ministry Login</h1>
+  <br />
+  <br />
   <div class="row justify-content-center align-items-center">
     <form [formGroup]="nodalloginForm" (ngSubmit)="onFormSubmit()">
       <div class="form-group row">
@@ -18,7 +19,7 @@
             "
             class="error"
           >
-            Ministry Id is required.
+            Ministry ID is required.
           </label>
         </p>
       </div>
@@ -34,7 +35,7 @@
       </div>
       <br />
       <br />
-      <div class="form-group row">
+      <div class="form-group row text-center">
         <button
           routerLink="/Ministry"
           [disabled]="nodalloginForm.invalid"

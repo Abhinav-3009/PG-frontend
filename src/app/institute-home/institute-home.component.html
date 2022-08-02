@@ -1,32 +1,26 @@
-
-<div class="mainInstitutehome" >
-    <!-- <div class="container mrgn-rt" id="leftcomponent">
-        <div>
-            <h2>Details of Institute {{institutedata.name}}</h2>
-        <hr>
-        <div >
-            Institue Id: {{institutedata.instituteId}}
-            InstituteType : {{institutedata.instituteType}}<br>
-            State : {{institutedata.state}}<br>
-        </div><br>
-        </div>
-        
-    </div> -->
-    <div id="rightcomponent" class="container">
-        <div class="container" id="toprightcomponent">
-            <h2>Details of Institute {{institutedata.name}}</h2>
-            <hr>
-            <div >
-                InstituteName : {{institutedata.name}}<br>
-                InstituteType : {{institutedata.instituteType}}<br>
-                InstituteCode : {{institutedata.institutecode}}<br>
-                State : {{institutedata.state}}<br>
-                City : {{institutedata.city}}<br>
-                PrincipalName : {{institutedata.principalName}}<br>
-
-            </div><br>
-            <a [routerLink]="['/ApplicationForInstitute/',instituteid]" class="btn btn-primary r1">Show all Student Applications</a>
-        </div>
+<div class="mainInstitutehome">
+  <div id="component" class="container">
+    <div class="container" id="toprightcomponent">
+      <h2 class="display-4 text-center">Welcome, {{ institutedata.name }}</h2>
+      <hr />
+      <div class="card lead">
+        Institute Name : {{ institutedata.name }}<br />
+        Institute Code : {{ institutedata.institutecode }}<br />
+        Type : {{ institutedata.instituteType }}<br />
+        Category : {{ institutedata.instituteCategory }}<br />
+        City : {{ institutedata.city }}<br />
+        State : {{ institutedata.state }}<br />
+        Principal Name : {{ institutedata.principalName }}<br />
+      </div>
+      <br />
+      <div class="text-center">
+        <a
+          [routerLink]="['/ApplicationForInstitute/', instituteid]"
+          class="btn btn-primary r1"
+          >Show all Student Applications</a
+        >
+      </div>
     </div>
-    
+    <br />
+  </div>
 </div>
