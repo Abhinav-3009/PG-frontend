@@ -26,6 +26,6 @@ export class NodalOfficerComponent implements OnInit {
       this.institutedata=data
   })
   console.log(this.institutedata)
-  }
+  } 
 
 }

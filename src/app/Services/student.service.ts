@@ -26,4 +26,8 @@ export class StudentService {
   getStudent(id:number):Observable<any>{
     return this.httpclient.get<IStudent>(this.url+'StudentDetails/'+id)
   }
+
+  checkstatus(id:number):Observable<any>{
+    return this.httpclient.get<any>(this.url+'ApprovalStatus/'+id)
+  }
 }

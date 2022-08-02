@@ -26,6 +26,8 @@ import { NodalLoginComponent } from './nodal-login/nodal-login.component';
 import { MinistryLoginComponent } from './ministry-login/ministry-login.component';
 import { NodalSchDetailsComponent } from './nodal-sch-details/nodal-sch-details.component';
 import { NodalInsDetailsComponent } from './nodal-ins-details/nodal-ins-details.component';
+import { MinistrySchDetailsComponent } from './ministry-sch-details/ministry-sch-details.component';
+import { MinistryInsDetailsComponent } from './ministry-ins-details/ministry-ins-details.component';
 
 
 
@@ -49,7 +51,9 @@ import { NodalInsDetailsComponent } from './nodal-ins-details/nodal-ins-details.
     NodalLoginComponent,
     MinistryLoginComponent,
     NodalSchDetailsComponent,
-    NodalInsDetailsComponent
+    NodalInsDetailsComponent,
+    MinistrySchDetailsComponent,
+    MinistryInsDetailsComponent
   ],
   imports: [
     BrowserModule,
