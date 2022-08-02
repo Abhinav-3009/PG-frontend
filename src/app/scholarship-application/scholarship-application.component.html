@@ -1,291 +1,500 @@
+<br />
 <h1>SCHOLARSHIP APPLICATION FORM</h1>
-
-<form class="container" [formGroup] = "applicationform" (ngSubmit)="saveSchApp()" >
-
-    <div class="form-group row">
-        <label for="Religion" class="col-4 col-form-label">Religion</label>
-    <input type="text"  list="Religion" placeholder="Select your Religion" formControlName="Religion">
-    <datalist id="Religion">
-        <option value="Hindu">
-        <option value="Muslim">
-       <option value="Christian">
-       <option value="Sikh">
-       <option value="Islam">
-       <option value="Jain">
-       <option value="Other">
-    </datalist>
+<br />
+<hr />
+<br />
+<form class="container" [formGroup]="applicationform" (ngSubmit)="saveSchApp()">
+  <div class="form-group row">
+    <label for="Religion" class="col-4 col-form-label">Religion</label>
+    <div class="col-4">
+      <input
+        type="text"
+        list="Religion"
+        placeholder="Select Your Religion"
+        formControlName="Religion"
+      />
+      <datalist id="Religion">
+        <option value="Hindu"></option>
+        <option value="Muslim"></option>
+        <option value="Christian"></option>
+        <option value="Sikh"></option>
+        <option value="Islam"></option>
+        <option value="Jain"></option>
+        <option value="Other"></option>
+      </datalist>
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="Community" class="col-4 col-form-label">Community/Category</label>
-        <div class="col-8">
-            <input id="Community"  placeholder="SC/ST/OBC etc" type="text"
-                class="form-control" formControlName="Community">
-        </div>
+  <div class="form-group row">
+    <label for="Community" class="col-4 col-form-label"
+      >Community/Category</label
+    >
+    <div class="col-3">
+      <input
+        id="Community"
+        placeholder="Enter Your Community"
+        type="text"
+        class="form-control"
+        formControlName="Community"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="Fathername" class="col-4 col-form-label">Father Name</label>
-        <div class="col-8">
-            <input id="Fathername" placeholder="Father Name" type="text"
-                class="form-control" formControlName="Fathername">
-        </div>
+  <div class="form-group row">
+    <label for="Fathername" class="col-4 col-form-label">Father Name</label>
+    <div class="col-8">
+      <input
+        id="Fathername"
+        placeholder="Enter Your Father's Name"
+        type="text"
+        class="form-control"
+        formControlName="Fathername"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="Mothername" class="col-4 col-form-label">Mother Name</label>
-        <div class="col-8">
-            <input id="Mothername" name="MotherName" placeholder="Mother Name" type="text"
-                class="form-control" formControlName="Mothername">
-        </div>
+  <div class="form-group row">
+    <label for="Mothername" class="col-4 col-form-label">Mother Name</label>
+    <div class="col-8">
+      <input
+        id="Mothername"
+        name="MotherName"
+        placeholder="Enter Your Mother's Name"
+        type="text"
+        class="form-control"
+        formControlName="Mothername"
+      />
     </div>
-    
-    <div class="form-group row">
-        <label for="AnnualIncome" class="col-4 col-form-label">Family Annual Income</label>
-        <div class="col-8">
-            <input id="AnnualIncome" formControlName="AnnualIncome" placeholder="AnnualIncome" type="text"
-                class="form-control" >
-        </div>
-    </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="InstituteName" class="col-4 col-form-label">Institute Name</label>
-        <div class="col-8">
-            <input id="InstituteName" formControlName="InstituteName" placeholder="Institute Name" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="AnnualIncome" class="col-4 col-form-label"
+      >Family Annual Income</label
+    >
+    <div class="col-3">
+      <input
+        id="AnnualIncome"
+        formControlName="AnnualIncome"
+        placeholder="Your Family Annual Income"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="PresentCourse" class="col-4 col-form-label">Present Course/Class</label>
-        <div class="col-8">
-            <input id="PresentCourse" formControlName="PresentCourse" placeholder="PresentCourse Name" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="InstituteName" class="col-4 col-form-label"
+      >Institute Name</label
+    >
+    <div class="col-8">
+      <input
+        id="InstituteName"
+        formControlName="InstituteName"
+        placeholder="Institute Name"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="PresentCourseYear" class="col-4 col-form-label">Present Course/Class Year</label>
-        <div class="col-8">
-            <input id="PresentCourseYear" formControlName="PresentCourseYear" placeholder="PresentCourse Year" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="PresentCourse" class="col-4 col-form-label"
+      >Present Course/Class</label
+    >
+    <div class="col-8">
+      <input
+        id="PresentCourse"
+        formControlName="Present Course"
+        placeholder="Enter Present Course Name"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
+  <div class="form-group row">
+    <label for="PresentCourseYear" class="col-4 col-form-label"
+      >Present Course/Class Year</label
+    >
+    <div class="col-2">
+      <input
+        id="PresentCourseYear"
+        formControlName="PresentCourseYear"
+        placeholder="Enter Course Year"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="ModeofStudy" class="col-4 col-form-label">Mode of Study</label>
-    <input type="text" formControlName="ModeOfStudy" list="ModeofStudy" placeholder="Mode of Study"  >
-    <datalist id="ModeofStudy">
-        <option value="Offline">
-        <option value="Online">
-       
-    </datalist>
+  <div class="form-group row">
+    <label for="ModeofStudy" class="col-4 col-form-label">Mode of Study</label>
+    <div class="col-4">
+      <input
+        type="text"
+        formControlName="ModeOfStudy"
+        list="ModeofStudy"
+        placeholder="Enter Mode of Study"
+      />
+      <datalist id="ModeofStudy">
+        <option value="Offline"></option>
+        <option value="Online"></option>
+      </datalist>
     </div>
+  </div>
 
-    <div class="form-group row">
-        <div class="md-form md-outline input-with-post-icon datepicker">
-          <label class="col-4">Class Start Date </label>
-          <input placeholder="Class Start Date " type="date" id="ClassStartDate" formControlName="ClassStartDate" class="form-control">
-        </div>
-      </div>
+  <div class="form-group row">
+    <label class="col-4 col-form-label">Class Start Date </label>
+    <div class="col-2">
+      <input
+        placeholder="Class Start Date "
+        type="date"
+        id="ClassStartDate"
+        formControlName="ClassStartDate"
+        class="form-control"
+      />
+    </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="Board Name" class="col-4 col-form-label">University/Board Name</label>
-        <div class="col-8">
-            <input id="BoardName" formControlName="UniversityBoardName" placeholder="Board Name Name" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="Board Name" class="col-4 col-form-label"
+      >University/Board Name</label
+    >
+    <div class="col-8">
+      <input
+        id="BoardName"
+        formControlName="UniversityBoardName"
+        placeholder="Enter Board Name"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="PreviousCourse" class="col-4 col-form-label">Previous Class/Course</label>
-        <div class="col-8">
-            <input id="PreviousCourse" formControlName="PreviousCourse" placeholder="Previous Course" type="text"
-                class="form-control">
-        </div>
+  <div class="form-group row">
+    <label for="PreviousCourse" class="col-4 col-form-label"
+      >Previous Class/Course</label
+    >
+    <div class="col-8">
+      <input
+        id="PreviousCourse"
+        formControlName="PreviousCourse"
+        placeholder="Enter Previous Course"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
+  <div class="form-group row">
+    <label for="PreviousPassingYear" class="col-4 col-form-label"
+      >Previous Passing Year</label
+    >
+    <div class="col-2">
+      <input
+        id="PreviousPassingYear"
+        formControlName="PreviousPassingYear"
+        placeholder="Enter Passing Year"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="PreviousPassingYear" class="col-4 col-form-label">Previous Passing Year</label>
-        <div class="col-8">
-            <input id="PreviousPassingYear" formControlName="PreviousPassingYear" placeholder="PreviousPassingYear" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="PreviousClassPercentage" class="col-4 col-form-label"
+      >Previous Class Percentage</label
+    >
+    <div class="col-2">
+      <input
+        id="PreviousClassPercentage"
+        formControlName="PreviousCoursePercentage"
+        placeholder="Enter percentage"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
+  <br />
+  <h3>10th Class Details</h3>
+  <hr />
+  <div class="form-group row">
+    <label for="10thRollNo" class="col-4 col-form-label">10th Roll No.</label>
+    <div class="col-2">
+      <input
+        id="10th Roll No"
+        formControlName="RollNumber10th"
+        placeholder="Enter 10th Roll No."
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="BoardName" class="col-4 col-form-label">10th Board Name</label>
+    <div class="col-8">
+      <input
+        id="BoardName"
+        formControlName="BoardName10th"
+        placeholder="10th Board Name"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="10thPassingYear" class="col-4 col-form-label"
+      >10th Passing Year</label
+    >
+    <div class="col-8">
+      <input
+        id="10thPassingYear"
+        formControlName="PassingYear10th"
+        placeholder="10th Passing Year"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="10thPercentageObtained" class="col-4 col-form-label"
+      >10th Percentage Obtained</label
+    >
+    <div class="col-8">
+      <input
+        id="10thPercentageObtained"
+        formControlName="Percentage10th"
+        placeholder="10th Percentage Obtained"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="12thRollNo" class="col-4 col-form-label">12th Roll No.</label>
+    <div class="col-8">
+      <input
+        id="12th Roll No"
+        formControlName="RollNumber12th"
+        placeholder="12th Roll No"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="12thBoardName" class="col-4 col-form-label"
+      >12th Board Name</label
+    >
+    <div class="col-8">
+      <input
+        id="12thBoardName"
+        formControlName="BoardName12th"
+        placeholder="12th Board Name"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="12thPassingYear" class="col-4 col-form-label"
+      >12th Passing Year</label
+    >
+    <div class="col-8">
+      <input
+        id="12thPassingYear"
+        formControlName="PassingYear12th"
+        placeholder="12th Passing Year"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="12thPercentageObtained" class="col-4 col-form-label"
+      >12th Percentage Obtained</label
+    >
+    <div class="col-8">
+      <input
+        id="12thPercentageObtained"
+        formControlName="Percentage12th"
+        placeholder="12th Percentage Obtained"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="PreviousClassPercentage" class="col-4 col-form-label">Previous Class Percentage</label>
-        <div class="col-8">
-            <input id="PreviousClassPercentage" formControlName="PreviousCoursePercentage" placeholder="PreviousClassPercentage" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="AdmissionFee" class="col-4 col-form-label">Admission Fee</label>
+    <div class="col-8">
+      <input
+        id="AdmissionFee"
+        formControlName="AdmissionFee"
+        placeholder="Admission Fee"
+        type="text"
+        class="form-control"
+      />
     </div>
-    <div class="form-group row">
-        <label for="10thRollNo" class="col-4 col-form-label">10th Roll No.</label>
-        <div class="col-8">
-            <input id="10th Roll No" formControlName="RollNumber10th" placeholder="10th Roll No" type="text"
-                class="form-control" >
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="BoardName" class="col-4 col-form-label">10th Board Name</label>
-        <div class="col-8">
-            <input id="BoardName" formControlName="BoardName10th" placeholder="10th Board Name" type="text"
-                class="form-control" >
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="10thPassingYear" class="col-4 col-form-label">10th Passing Year</label>
-        <div class="col-8">
-            <input id="10thPassingYear" formControlName="PassingYear10th" placeholder="10th Passing Year" type="text"
-                class="form-control" >
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="10thPercentageObtained" class="col-4 col-form-label">10th Percentage Obtained</label>
-        <div class="col-8">
-            <input id="10thPercentageObtained" formControlName="Percentage10th" placeholder="10th Percentage Obtained" type="text"
-                class="form-control" >
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="12thRollNo" class="col-4 col-form-label">12th Roll No.</label>
-        <div class="col-8">
-            <input id="12th Roll No" formControlName="RollNumber12th" placeholder="12th Roll No" type="text"
-                class="form-control" >
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="12thBoardName" class="col-4 col-form-label">12th Board Name</label>
-        <div class="col-8">
-            <input id="12thBoardName" formControlName="BoardName12th" placeholder="12th Board Name" type="text"
-                class="form-control" >
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="12thPassingYear" class="col-4 col-form-label">12th Passing Year</label>
-        <div class="col-8">
-            <input id="12thPassingYear" formControlName="PassingYear12th" placeholder="12th Passing Year" type="text"
-                class="form-control" >
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="12thPercentageObtained" class="col-4 col-form-label">12th Percentage Obtained</label>
-        <div class="col-8">
-            <input id="12thPercentageObtained" formControlName="Percentage12th" placeholder="12th Percentage Obtained" type="text"
-                class="form-control" >
-        </div>
-    </div>
+  </div>
 
-
-
-
-    <div class="form-group row">
-        <label for="AdmissionFee" class="col-4 col-form-label">Admission Fee</label>
-        <div class="col-8">
-            <input id="AdmissionFee" formControlName="AdmissionFee" placeholder="Admission Fee" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="TuitionFee" class="col-4 col-form-label">Tuition Fee</label>
+    <div class="col-8">
+      <input
+        id="TuitionFee"
+        formControlName="TuitionFee"
+        placeholder="Tuition Fee"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-
-    <div class="form-group row">
-        <label for="TuitionFee" class="col-4 col-form-label">Tuition Fee</label>
-        <div class="col-8">
-            <input id="TuitionFee" formControlName="TuitionFee" placeholder="Tuition Fee" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="OtherFee" class="col-4 col-form-label">Other Fee</label>
+    <div class="col-8">
+      <input
+        id="OtherFee"
+        formControlName="OtherFee"
+        placeholder="Other Fee"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="OtherFee" class="col-4 col-form-label">Other Fee</label>
-        <div class="col-8">
-            <input id="OtherFee" formControlName="OtherFee" placeholder="Other Fee" type="text"
-                class="form-control" >
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label for="IsDisabled" class="col-4 col-form-label">Is Disabled</label>
-    <input type="text" formControlName="IsDisabled" list="IsDisabled" placeholder="" >
+  <div class="form-group row">
+    <label for="IsDisabled" class="col-4 col-form-label">Is Disabled</label>
+    <input
+      type="text"
+      formControlName="IsDisabled"
+      list="IsDisabled"
+      placeholder=""
+    />
     <datalist id="IsDisabled">
-        <option value="Yes">
-        <option value="No">
+      <option value="Yes"></option>
+      <option value="No"></option>
     </datalist>
-    </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="DisabilityType" class="col-4 col-form-label">Type of Disability </label>
-        <div class="col-8">
-            <input id="DisabilityType" formControlName="DisabilityType" placeholder="DisabilityType" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="DisabilityType" class="col-4 col-form-label"
+      >Type of Disability
+    </label>
+    <div class="col-8">
+      <input
+        id="DisabilityType"
+        formControlName="DisabilityType"
+        placeholder="DisabilityType"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="DisabilityPercentage" class="col-4 col-form-label">Percentage of Disability </label>
-        <div class="col-8">
-            <input id="DisabilityPercentage" formControlName="DisabilityPercentage" placeholder="DisabilityPercentage" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="DisabilityPercentage" class="col-4 col-form-label"
+      >Percentage of Disability
+    </label>
+    <div class="col-8">
+      <input
+        id="DisabilityPercentage"
+        formControlName="DisabilityPercentage"
+        placeholder="DisabilityPercentage"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="MaritalStatus" class="col-4 col-form-label">Marital Status</label>
-    <input type="text" formControlName="MaritalStatus" list="MaritalStatus" placeholder="" >
+  <div class="form-group row">
+    <label for="MaritalStatus" class="col-4 col-form-label"
+      >Marital Status</label
+    >
+    <input
+      type="text"
+      formControlName="MaritalStatus"
+      list="MaritalStatus"
+      placeholder=""
+    />
     <datalist id="MaritalStatus">
-        <option value="Single">
-        <option value="Married">
-        <option value="Widowed">
-        <option value="Seperated">
-        <option value="Divorced">
+      <option value="Single"></option>
+      <option value="Married"></option>
+      <option value="Widowed"></option>
+      <option value="Seperated"></option>
+      <option value="Divorced"></option>
     </datalist>
-    </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="ParentsProfession" class="col-4 col-form-label">Parents Profession</label>
-        <div class="col-8">
-            <input id="ParentsProfession" formControlName="ParentsProfession" placeholder="Parents Profession" type="text" class="form-control"
-                >
-        </div>
+  <div class="form-group row">
+    <label for="ParentsProfession" class="col-4 col-form-label"
+      >Parents Profession</label
+    >
+    <div class="col-8">
+      <input
+        id="ParentsProfession"
+        formControlName="ParentsProfession"
+        placeholder="Parents Profession"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="State" class="col-4 col-form-label">State</label>
-        <div class="col-8">
-            <input id="State" formControlName="State" placeholder="Maharashtra" type="text" class="form-control"
-                >
-        </div>
+  <div class="form-group row">
+    <label for="State" class="col-4 col-form-label">State</label>
+    <div class="col-8">
+      <input
+        id="State"
+        formControlName="State"
+        placeholder="Maharashtra"
+        type="text"
+        class="form-control"
+      />
     </div>
-    <div class="form-group row">
-        <label for="District" class="col-4 col-form-label">District</label>
-        <div class="col-8">
-            <input id="District" formControlName="District" placeholder="Disctrict" type="text" class="form-control"
-                >
-        </div>
+  </div>
+  <div class="form-group row">
+    <label for="District" class="col-4 col-form-label">District</label>
+    <div class="col-8">
+      <input
+        id="District"
+        formControlName="District"
+        placeholder="Disctrict"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-
-    <div class="form-group row">
-        <label for="Address" class="col-4 col-form-label">Address</label>
-        <div class="col-8">
-            <input id="Address" formControlName="Address" placeholder="Address" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="Address" class="col-4 col-form-label">Address</label>
+    <div class="col-8">
+      <input
+        id="Address"
+        formControlName="Address"
+        placeholder="Address"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="Pincode" class="col-4 col-form-label">Pincode</label>
-        <div class="col-8">
-            <input id="Pincode" formControlName="Pincode" placeholder="Pincode" type="text"
-                class="form-control" >
-        </div>
+  <div class="form-group row">
+    <label for="Pincode" class="col-4 col-form-label">Pincode</label>
+    <div class="col-8">
+      <input
+        id="Pincode"
+        formControlName="Pincode"
+        placeholder="Pincode"
+        type="text"
+        class="form-control"
+      />
     </div>
+  </div>
 
-    <h3>SCHOLARSHIP</h3>
-   <!--<div class="form-group row">
+  <h3>SCHOLARSHIP</h3>
+  <!--<div class="form-group row">
       <label for="ScholarshipName" class="col-4 col-form-label">Select Scholarship:</label>
   <input type="number" name="ScholarshipName" list="ScholarshipName" placeholder="" [(ngModel)]="SchAppdata.ScholarshipId" required #ScholarshipId="ngModel">
   <datalist id="ScholarshipName">
@@ -294,40 +503,44 @@
         <option value="3">Merit Based Scholarship</option>
   </datalist>
   </div>
-  --> 
+  -->
   <div class="form-group">
     <label for="ScholarshipId">Select Scholarship:</label>
-    <select class="form-control" formControlName="ScholarshipId" id="ScholarshipId" >
-        <option value="1">Post Matric Scholarship</option>
-        <option value="2">Pragati Scholarship</option>
-        <option value="3">Merit Based Scholarship</option>
+    <select
+      class="form-control"
+      formControlName="ScholarshipId"
+      id="ScholarshipId"
+    >
+      <option value="1">Post Matric Scholarship</option>
+      <option value="2">Pragati Scholarship</option>
+      <option value="3">Merit Based Scholarship</option>
     </select>
   </div>
 
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1"> All the above Information furnished by me is true to the best of my knowledge .
-            If any mistakes are found then I maybe disqualified for scholarship scheme announced by government of India or my Stage Government</label>
-            
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">
+      All the above Information furnished by me is true to the best of my
+      knowledge . If any mistakes are found then I maybe disqualified for
+      scholarship scheme announced by government of India or my Stage
+      Government</label
+    >
+  </div>
+
+  <div class="button-parent">
+    <div class="child form-group row">
+      <div class="offset-4 col-8">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
     </div>
 
-    <div class="button-parent">
-        <div class="child form-group row">
-            <div class="offset-4 col-8">
-                <button  type="submit" class="btn btn-primary">Register</button>
-            </div>
-        </div>
-
-        <div class="child form-group row">
-            <div class="offset-4 col-8">
-                <button  type="reset" class="btn btn-primary">Reset</button>
-            </div>
-        </div>
+    <div class="child form-group row">
+      <div class="offset-4 col-8">
+        <button type="reset" class="btn btn-primary">Reset</button>
+      </div>
     </div>
-
+  </div>
 </form>
-
-
 
 <!--
 
