@@ -37,6 +37,8 @@
         class="form-control"
         formControlName="Community"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['Community'].errors!['required']" class="danger">Community Name
+        is required</div>
     </div>
   </div>
 
@@ -50,6 +52,8 @@
         class="form-control"
         formControlName="Fathername"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['Fathername'].errors!['required']" class="danger">Father Name
+        is required</div>
     </div>
   </div>
 
@@ -64,6 +68,8 @@
         class="form-control"
         formControlName="Mothername"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['Mothername'].errors!['required']" class="danger">Mother Name
+        is required</div>
     </div>
   </div>
 
@@ -79,6 +85,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['AnnualIncome'].errors!['required']" class="danger">Annual Income
+        is required</div> -->
     </div>
   </div>
 
@@ -93,7 +101,8 @@
         placeholder="Institute Name"
         type="text"
         class="form-control"
-      />
+      /><div *ngIf="formSubmitted && applicationform.controls['InstituteName'].errors!['required']" class="danger">Institute Name
+        is required</div>
     </div>
   </div>
 
@@ -104,11 +113,13 @@
     <div class="col-8">
       <input
         id="PresentCourse"
-        formControlName="Present Course"
+        formControlName="PresentCourse"
         placeholder="Enter Present Course Name"
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['PresentCourse'].errors!['required']" class="danger">Field
+        is required</div>
     </div>
   </div>
 
@@ -124,6 +135,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['PresentCourseYear'].errors!['required']" class="danger">Field
+        is required</div>
     </div>
   </div>
 
@@ -136,6 +149,8 @@
         list="ModeofStudy"
         placeholder="Enter Mode of Study"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['ModeOfStudy'].errors!['required']" class="danger">Field
+        is required</div>
       <datalist id="ModeofStudy">
         <option value="Offline"></option>
         <option value="Online"></option>
@@ -153,6 +168,8 @@
         formControlName="ClassStartDate"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['ClassStartDate'].errors!['required']" class="danger">Date
+        is required</div> -->
     </div>
   </div>
 
@@ -168,6 +185,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['UniversityBoardName'].errors!['required']" class="danger">Board Name
+        is required</div>
     </div>
   </div>
 
@@ -183,6 +202,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['PreviousCourse'].errors!['required']" class="danger">Field
+        is required</div>
     </div>
   </div>
 
@@ -198,6 +219,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['PreviousPassingYear'].errors!['required']" class="danger">Field
+        is required</div>
     </div>
   </div>
 
@@ -210,9 +233,11 @@
         id="PreviousClassPercentage"
         formControlName="PreviousCoursePercentage"
         placeholder="Enter percentage"
-        type="text"
+        type="number"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['PreviousCoursePercentage'].errors!['required']" class="danger">Father Name
+        is required</div> -->
     </div>
   </div>
   <br />
@@ -228,6 +253,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['RollNumber10th'].errors!['required']" class="danger">Roll no
+        is required</div> -->
     </div>
   </div>
   <div class="form-group row">
@@ -240,6 +267,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['BoardName10th'].errors!['required']" class="danger">10th board number
+        is required</div>
     </div>
   </div>
   <div class="form-group row">
@@ -254,6 +283,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['PassingYear10th'].errors!['required']" class="danger">10th passing year
+        is required</div>
     </div>
   </div>
   <div class="form-group row">
@@ -268,6 +299,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['Percentage10th'].errors!['required']" class="danger">10th Percentange 
+        is required</div> -->
     </div>
   </div>
   <div class="form-group row">
@@ -280,6 +313,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['RollNumber12th'].errors!['required']" class="danger">12th Roll number
+        is required</div> -->
     </div>
   </div>
   <div class="form-group row">
@@ -294,6 +329,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['BoardName12th'].errors!['required']" class="danger">12th board name
+        is required</div>
     </div>
   </div>
   <div class="form-group row">
@@ -308,6 +345,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['PassingYear12th'].errors!['required']" class="danger">Field
+        is required</div>
     </div>
   </div>
   <div class="form-group row">
@@ -322,6 +361,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['Percentage12th'].errors!['required']" class="danger">12th percentage obtained
+        is required</div> -->
     </div>
   </div>
 
@@ -335,6 +376,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['AdmissionFee'].errors!['required']" class="danger">Admission fee
+        is required</div> -->
     </div>
   </div>
 
@@ -348,6 +391,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['TuitionFee'].errors!['required']" class="danger">Tution fee
+        is required</div> -->
     </div>
   </div>
 
@@ -361,6 +406,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['OtherFee'].errors!['required']" class="danger">Other fee
+        is required</div> -->
     </div>
   </div>
 
@@ -390,6 +437,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['DisabilityType'].errors!['required']" class="danger">Disablity Type
+        is required</div>
     </div>
   </div>
 
@@ -405,6 +454,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['DisabilityPercentage'].errors!['required']" class="danger">Disability percentage
+        is required</div> -->
     </div>
   </div>
 
@@ -418,6 +469,8 @@
       list="MaritalStatus"
       placeholder=""
     />
+    <div *ngIf="formSubmitted && applicationform.controls['MaritalStatus'].errors!['required']" class="danger">Marital status
+      is required</div>
     <datalist id="MaritalStatus">
       <option value="Single"></option>
       <option value="Married"></option>
@@ -439,6 +492,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['ParentsProfession'].errors!['required']" class="danger">Parents profession
+        is required</div>
     </div>
   </div>
 
@@ -452,6 +507,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['State'].errors!['required']" class="danger">State
+        is required</div>
     </div>
   </div>
   <div class="form-group row">
@@ -464,6 +521,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['District'].errors!['required']" class="danger">District
+        is required</div>
     </div>
   </div>
 
@@ -477,6 +536,8 @@
         type="text"
         class="form-control"
       />
+      <div *ngIf="formSubmitted && applicationform.controls['Address'].errors!['required']" class="danger">Address
+        is required</div>
     </div>
   </div>
 
@@ -490,6 +551,8 @@
         type="text"
         class="form-control"
       />
+      <!-- <div *ngIf="formSubmitted && applicationform.controls['Pincode'].errors!['required']" class="danger">Pincode
+        is required</div> -->
     </div>
   </div>
 
@@ -515,6 +578,8 @@
       <option value="2">Pragati Scholarship</option>
       <option value="3">Merit Based Scholarship</option>
     </select>
+    <!-- <div *ngIf="formSubmitted && applicationform.controls['ScholarshipId'].errors!['required']" class="danger">Choosing a scholarship
+      is required</div> -->
   </div>
 
   <div class="form-group form-check">
