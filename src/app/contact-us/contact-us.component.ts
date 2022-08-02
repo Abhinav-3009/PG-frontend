@@ -13,7 +13,7 @@ export class ContactUsComponent implements OnInit {
   constructor(private router:Router) { }
 
   Alert(){
-    alert("Our team will contact you soon !")
+    alert("Thank You! We will get back to you.")
     this.router.navigate(['/Home'])
   }
 
