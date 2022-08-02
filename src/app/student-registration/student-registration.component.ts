@@ -39,13 +39,13 @@ export class StudentRegistrationComponent implements OnInit {
   saveStudent(){
     this.formSubmitted=true;
     console.log(this.formSubmitted)
-    // console.log(this.studentregistrationform.value)
-    // this.studentservice.addStudent(this.studentregistrationform.value).subscribe((d)=>{
-    //   console.log("service working")
-    //   console.log(d)
-    //   alert("Student Registration Successfull, continue to log in page")
-    //   this.router.navigate(['/Home'])
-    // })
+    console.log(this.studentregistrationform.value)
+    this.studentservice.addStudent(this.studentregistrationform.value).subscribe((d)=>{
+      console.log("service working")
+      console.log(d)
+      alert("Student Registration Successfull, continue to log in page")
+      this.router.navigate(['/Home'])
+    })
     
   }
   ngOnInit(): void {
