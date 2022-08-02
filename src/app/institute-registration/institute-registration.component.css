@@ -1,28 +1,27 @@
-.mgrt{
-    margin-right: 10px;
+.mgrt {
+  margin-right: 10px;
 }
 
-.button-parent{
-    display: flex;
-    
+.button-parent {
+  display: flex;
 }
 
-.child{
-    flex:1;
+.child {
+  flex: 1;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
-.r1{
-    margin-left: 310px;
+.r1 {
+  margin-left: 310px;
 }
-.r2{
-    margin-left:50px;
+.r2 {
+  margin-left: 50px;
 }
-.r3{
-    margin-left: 4px;
+.r3 {
+  margin-left: 4px;
 }
-.r5{
-    margin-top: 50px;
+.r5 {
+  margin-top: 50px;
 }

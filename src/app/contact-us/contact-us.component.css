@@ -17,7 +17,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: darkred;
+  background-color: #ff495c;
   color: white;
   padding: 12px 20px;
   border: none;
