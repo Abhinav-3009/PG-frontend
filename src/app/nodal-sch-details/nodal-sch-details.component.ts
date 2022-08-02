@@ -10,6 +10,11 @@ import { NodalService } from '../Services/nodal.service';
   templateUrl: './nodal-sch-details.component.html',
   styleUrls: ['./nodal-sch-details.component.css']
 })
+
+///<summary>
+//This component is to show details of student to nodal officer   
+// nodal officer can approve or reject the application.
+
 export class NodalSchDetailsComponent implements OnInit {
     application: IApplication={
       applicationId:0,

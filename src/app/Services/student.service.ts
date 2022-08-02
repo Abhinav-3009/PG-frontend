@@ -6,6 +6,10 @@ import { Observable } from 'rxjs';
 import { IStudent } from '../istudent';
 import { IStudentLogin } from '../istudent-login';
 
+
+//Service to fetch, add, check student details from the backend
+
+
 @Injectable({
   providedIn: 'root'
 })

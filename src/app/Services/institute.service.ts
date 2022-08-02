@@ -7,6 +7,10 @@ import { IInstituteLogin } from '../iinstitute-login';
 import { catchError,throwError } from 'rxjs';
 
 
+
+
+// This service is used to provide services related to InstituteService
+// it calls methods of institut controller in backend
 @Injectable({
   providedIn: 'root'
 })

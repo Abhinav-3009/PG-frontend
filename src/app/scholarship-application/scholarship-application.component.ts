@@ -15,48 +15,14 @@ import { ReactiveFormsModule } from '@angular/forms';
   templateUrl: './scholarship-application.component.html',
   styleUrls: ['./scholarship-application.component.css']
 })
+
+///<summary>
+//This component is for student to apply for a scholarship.The student call fill all the necessary details in the 
+// form provided and using SchAppService the data will be passed to backend 
+
 export class ScholarshipApplicationComponent implements OnInit {
   applicationform = {} as FormGroup
   formSubmitted=false
-//   SchAppdata:SchApplication={
-//   StudentId:0,
-//   InstituteId:0,
-//   Religion:'',
-//     Community:'',
-//     Fathername:'',
-//     Mothername:'',
-//     AnnualIncome:0,
-//     InstituteName:'',
-//     PresentCourse:'',
-//     PresentCourseYear:'',
-//     ModeOfStudy:'',
-//     ClassStartDate:new Date(),
-//     UniversityBoardName:'',
-//     PreviousCourse:'',
-//     PreviousPassingYear:'',
-//     PreviousCoursePercentage:0,
-//     RollNumber10th:0,
-//     BoardName10th:'',
-//     PassingYear10th:'',
-//     Percentage10th:0,
-//     RollNumber12th:0,
-//     BoardName12th:'',
-//     PassingYear12th:'',
-//     Percentage12th:0,
-//     AdmissionFee:0,
-//     TuitionFee:0,
-//     OtherFee:0,
-//     IsDisabled:'',
-//     DisabilityType:'',
-//     DisabilityPercentage:0,
-//     MaritalStatus:'',
-//     ParentsProfession:'',
-//     State:'',
-//     District:'',
-//     Address:'',
-//     Pincode:0,
-//     ScholarshipId:0
-// }
   studentid:number=0
   constructor(private formBuilder: FormBuilder,private schappservice:SchAppService, private router:Router,private activatedroute:ActivatedRoute) { }
 

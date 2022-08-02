@@ -8,6 +8,11 @@ import { MinistryService } from '../Services/ministry.service';
   templateUrl: './ministry.component.html',
   styleUrls: ['./ministry.component.css']
 })
+
+///<summary>
+//This component is for ministry home component.  
+// Ministry can see all the applications of student and institutes that are approved by nodal officer 
+
 export class MinistryComponent implements OnInit {
 
   studentdata:any[]=[]

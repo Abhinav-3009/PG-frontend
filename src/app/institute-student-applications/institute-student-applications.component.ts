@@ -10,6 +10,11 @@ import { ScholarshipapplicationService } from '../Services/scholarshipapplicatio
   templateUrl: './institute-student-applications.component.html',
   styleUrls: ['./institute-student-applications.component.css']
 })
+
+///<summary>
+//This component is for details for application for an institute . 
+//Here we have two main functions to approve and reject an application
+
 export class InstituteStudentApplicationsComponent implements OnInit {
   //@ts-ignore
   application: IApplication={

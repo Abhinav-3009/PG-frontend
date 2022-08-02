@@ -18,6 +18,12 @@ import { InstituteService } from '../Services/institute.service';
   templateUrl: './institute-login.component.html',
   styleUrls: ['./institute-login.component.css']
 })
+
+
+///<summary>
+//This component is for institute login page .Institute can provide login details in the form provided .
+//and after check the details from backend we alert the user that login is successful.
+
 export class InstituteLoginComponent implements OnInit {
 
   loginid:number=0

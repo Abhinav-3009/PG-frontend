@@ -9,12 +9,21 @@ import { ScholarshipapplicationService } from '../Services/scholarshipapplicatio
 })
 export class ApplicationsForInstituteComponent implements OnInit {
 
+
+  ///<summary>
+  //
+  // This component helps us to fetch and show all the scholarship applications for a specific institute.
+  // we can get the id of the institute from url using activated route and call the service to fetch all 
+  // the records from backend.
+  ///<summary>
+
+
   application: Iapplicatioforinstitute[] = []
   instituteid: number = 0
   constructor(private scholarshipservice: ScholarshipapplicationService, private activatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const tid = this.activatedroute.snapshot.paramMap.get('id')
+    const tid = this.activatedroute.snapshot.paramMap.get('id')                                
     console.log(tid)
     this.instituteid = Number(tid);
     console.log("institute id = " + this.instituteid)

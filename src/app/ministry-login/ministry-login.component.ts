@@ -7,6 +7,11 @@ import { of } from 'rxjs';
   templateUrl: './ministry-login.component.html',
   styleUrls: ['./ministry-login.component.css']
 })
+
+///<summary>
+//This component is for ministry login . Only if the ministry enters the correct details (id:ministry , password:ministry)
+// , the login will work.
+
 export class MinistryLoginComponent implements OnInit {
 
   nodalloginForm={} as FormGroup

@@ -8,6 +8,10 @@ import { NodalService } from '../Services/nodal.service';
   templateUrl: './nodal-officer.component.html',
   styleUrls: ['./nodal-officer.component.css']
 })
+
+///<summary>
+//This component is for nodal officer home page where all the student and institute applications are shown
+
 export class NodalOfficerComponent implements OnInit {
 
   studentdata:any[]=[]
