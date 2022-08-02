@@ -54,7 +54,7 @@ export class StudentRegistrationComponent implements OnInit {
       name: ['',Validators.required],
       dob: [new Date(),Validators.required],
       gender: ['',Validators.required],
-      mobileNumber: [0,Validators.required],
+      mobileNumber: ['',Validators.required],
       email: ['',Validators.required],
       instituteCode: [0,Validators.required],
       aadhaar: ['',Validators.required], 

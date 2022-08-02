@@ -12,7 +12,46 @@ import { ScholarshipapplicationService } from '../Services/scholarshipapplicatio
 })
 export class InstituteStudentApplicationsComponent implements OnInit {
   //@ts-ignore
-  application: IApplication
+  application: IApplication={
+    applicationId:0,
+    studentId:0,
+    instituteId:0,
+    religion:"",
+    community:"",
+    fathername:"",
+    mothername:"",
+    annualIncome:0,
+    instituteName:"",
+    presentCourse:"",
+    presentCourseYear:"",
+    modeOfStudy:"",
+    classStartDate: new Date(),
+    universityBoardName:"",
+    previousCourse:"",
+    previousPassingYear:"",
+    previousCoursePercentage:0,
+    rollNumber10th:0,
+    boardName10th:"",
+    passingYear10th:"",
+    percentage10th:0,
+    rollNumber12th:0,
+    boardName12th:"",
+    passingYear12th:"",
+    percentage12th:0,
+    admissionFee:0,
+    tuitionFee:0,
+    otherFee:0,
+    isDisabled:"",
+    disabilityType:"",
+    disabilityPercentage:0,
+    maritalStatus:"",
+    parentsProfession:"",
+    state:"",
+    district:"",
+    address:"",
+    pincode:0,
+    scholarshipId:0,
+  }
   applicationId: number = 0
   constructor(private schAppService: SchAppService, private ActivatedRoute: ActivatedRoute,private router:Router,
     private applicationservice:ScholarshipapplicationService
