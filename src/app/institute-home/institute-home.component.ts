@@ -9,8 +9,26 @@ import { InstituteService } from '../Services/institute.service';
   styleUrls: ['./institute-home.component.css']
 })
 export class InstituteHomeComponent implements OnInit {
-  //@ts-ignore
-  institutedata: IInstitute 
+  institutedata: IInstitute ={
+    instituteId:0,
+    instituteCategory:"",
+    name:"",
+    institutecode:0,
+    disecode:0,
+    location:"",
+    instituteType:"",
+    affiliatedState:"",
+    affiliatedName:"",
+    admissionStartYear:"",
+    password:"",
+    address:"",
+    city:"",
+    state:"",
+    district:"",
+    pincode:0,
+    principalName:"",
+    principalNumber:"",
+  }
 
   instituteid: number = 0
   load:boolean=false
