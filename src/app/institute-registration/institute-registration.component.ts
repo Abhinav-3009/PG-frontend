@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
+  FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
@@ -17,28 +18,10 @@ import { InstituteService } from '../Services/institute.service';
   styleUrls: ['./institute-registration.component.css']
 })
 export class InstituteRegistrationComponent implements OnInit {
-  instituteregistrationform = {} as FormGroup
+  //@ts-ignorets-
+  instituteregistrationform : FormGroup
+  formSubmitted=false
   
-  // institutedata:IInstituteregister={
-
-  //   instituteCategory:"",
-  //   name:"",
-  //   institutecode:0,
-  //   disecode:0,
-  //   location:"",
-  //   instituteType:"",
-  //   affiliatedState:"",
-  //   affiliatedName:"",
-  //   admissionStartYear:"",
-  //   password:"",
-  //   address:"",
-  //   city:"",
-  //   state:"",
-  //   district:"",
-  //   pincode:0,
-  //   principalName:"",
-  //   principalNumber:""
-  // }
 
   constructor(private formBuilder: FormBuilder, private instituteservice: InstituteService, private router: Router) { }
 
@@ -55,12 +38,13 @@ export class InstituteRegistrationComponent implements OnInit {
   // }
 
   saveInstitute(){
-    
+    this.formSubmitted=true
     console.log(this.instituteregistrationform.value)
     this.instituteservice.addInstitute(this.instituteregistrationform.value).subscribe((d)=>{
       alert("Registration Successfull")
       console.log("service working")
       console.log(d)
+      this.router.navigate(['/Home'])
     })
   }
 
@@ -69,23 +53,23 @@ export class InstituteRegistrationComponent implements OnInit {
   }
   createform() {
     this.instituteregistrationform = this.formBuilder.group({
-      instituteCategory: ['',Validators.required],
-      name: ['',Validators.required],
-      institutecode: [0,Validators.required],
-      disecode: [0,Validators.required],
-      location: ['',Validators.required],
-      instituteType: ['',Validators.required],
-      affiliatedState: ['',Validators.required],
-      affiliatedName: ['',Validators.required],
-      admissionStartYear: ['',Validators.required],
-      password: ['',Validators.required],
-      address: ['',Validators.required],
-      city: ['',Validators.required],
-      state: ['',Validators.required],
-      district: ['',Validators.required],
-      pincode: [0,Validators.required],
-      principalName: ['',Validators.required],
-      principalNumber: ['',Validators.required]
+      instituteCategory: ['',[Validators.required]],
+      name: ['',[Validators.required]],
+      institutecode: [0,[Validators.required]],
+      disecode: [0,[Validators.required]],
+      location: ['',[Validators.required]],
+      instituteType: ['',[Validators.required]],
+      affiliatedState: ['',[Validators.required]],
+      affiliatedName: ['',[Validators.required]],
+      admissionStartYear: ['',[Validators.required]],
+      password: ['',[Validators.required]],
+      address: ['',[Validators.required]],
+      city: ['',[Validators.required]],
+      state: ['',[Validators.required]],
+      district: ['',[Validators.required]],
+      pincode: [0,[Validators.required]],
+      principalName: ['',[Validators.required]],
+      principalNumber: ['',[Validators.required]]
     })
   }
 
