@@ -72,7 +72,7 @@ export class ScholarshipApplicationComponent implements OnInit {
   saveSchApp(){
     console.log(this.applicationform.value)
     this.schappservice.addSchApplication(this.applicationform.value).subscribe((d)=>{
-      alert("Registration Successfull")
+      alert("Application has been sent for further verification")
       console.log("service working")
       console.log(d)
     })
@@ -86,7 +86,7 @@ export class ScholarshipApplicationComponent implements OnInit {
   createform(){
     this.applicationform=this.formBuilder.group({
       StudentId:this.studentid,
-      InstituteId:6,
+      InstituteId:18,
       Religion:['',Validators.required],
     Community:['',Validators.required],
     Fathername:['',Validators.required],
