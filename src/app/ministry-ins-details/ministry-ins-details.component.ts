@@ -4,14 +4,12 @@ import { NodalService } from '../Services/nodal.service';
 import { IInstitute } from '../iinstitute';
 
 
-
-
 @Component({
-  selector: 'app-nodal-ins-details',
-  templateUrl: './nodal-ins-details.component.html',
-  styleUrls: ['./nodal-ins-details.component.css']
+  selector: 'app-ministry-ins-details',
+  templateUrl: './ministry-ins-details.component.html',
+  styleUrls: ['./ministry-ins-details.component.css']
 })
-export class NodalInsDetailsComponent implements OnInit {
+export class MinistryInsDetailsComponent implements OnInit {
   application: IInstitute={
     instituteId:0,
     instituteCategory:'',
@@ -59,3 +57,4 @@ export class NodalInsDetailsComponent implements OnInit {
   }
 
 }
+ 

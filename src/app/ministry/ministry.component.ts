@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IInstitute } from '../iinstitute';
+import { SchApplication } from '../sch-application';
+import { MinistryService } from '../Services/ministry.service';
 
 @Component({
   selector: 'app-ministry',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MinistryComponent implements OnInit {
 
-  constructor() { }
+  studentdata:any[]=[]
+  institutedata:any[]=[]
+  constructor(private ministryservice: MinistryService) { }
 
   ngOnInit(): void {
+    this.ministryservice.getStudents().subscribe((data:any)=>{
+      this.studentdata=data
+  })
+  console.log(this.studentdata)
+
+  this.ministryservice.getInstitutes().subscribe((data:any)=>{
+    this.institutedata=data
+})
+console.log(this.institutedata)
   }
 
 }

@@ -40,15 +40,9 @@
         Pincode : {{application.pincode}}<br>
         Scholarship ID : {{application.scholarshipId}}<br>
     </p>
-    <!-- <button (onclick)="approveapplication({{application.applicationId}})" class="btn btn-primary">Approve</button> -->
-    <!-- <input type="button" value="Click" ng-click ="approveapplication(application.applicationId)"> -->
-    <!-- <button type="button" 
-                ng-click="approveapplication(application.applicationId)">
-          GFG
-      </button> -->
+    
       <div class="parent">
-      <button  class="child btn-primary" (click)="approveapplication(application.applicationId)">Approve</button>
-      <button class="child btn-primary" (click)="rejectapplication(application.applicationId)">Reject</button>
-    </div>
-      <!-- <input type="button" value="Click" id="approve"></input> -->
+      <button routerLink='/NodalOfficer' class="child btn-primary" (click)="approveapplication(application.applicationId)">Approve</button>
+      <button routerLink='/NodalOfficer' class="child btn-primary" (click)="rejectapplication(application.applicationId)">Reject</button>
+    </div> 
 </div>

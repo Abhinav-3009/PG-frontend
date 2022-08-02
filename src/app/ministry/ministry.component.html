@@ -1,0 +1,56 @@
+<div class="parent">
+    <div class="container child left">
+        <h2>Student Applications</h2>
+        <div class="jumbotron">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Application ID</th>
+                        <th>Student ID</th>
+                        <th>Scholarship ID</th>
+                        <th>Present Course Name</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let app of studentdata">
+                        <td>{{app.applicationId}}</td>
+                        <td>{{app.studentId}}</td>
+                        <td>{{app.scholarshipId}}</td>
+                        <td>{{app.presentCourse}}</td>
+                        <td><a
+                                [routerLink]="['/MinistrySchDetails/',app.applicationId]">Details</a>&nbsp;&nbsp;&nbsp;
+                        </td>&nbsp;&nbsp;&nbsp;
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container child right">
+        <h2>Institute Applications</h2>
+        <div class="jumbotron">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Institute ID</th>
+                        <th>Institute Category</th>
+                        <th>Institute Name</th>
+                        
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let app of institutedata">
+                        <td>{{app.instituteId}}</td>
+                        <td>{{app.instituteCategory}}</td>
+                        <td>{{app.name}}</td>
+                        
+                        <td><a
+                                [routerLink]="['/MinistryInsDetails/',app.instituteId]">Details</a>&nbsp;&nbsp;&nbsp;
+                        </td>&nbsp;&nbsp;&nbsp;
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

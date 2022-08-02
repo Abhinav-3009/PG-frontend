@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SchApplication } from '../sch-application';
 import { SchAppService } from '../Services/sch-app.service';
 import { IApplication } from '../iapplication';
@@ -14,7 +14,7 @@ export class InstituteStudentApplicationsComponent implements OnInit {
   //@ts-ignore
   application: IApplication
   applicationId: number = 0
-  constructor(private schAppService: SchAppService, private ActivatedRoute: ActivatedRoute,
+  constructor(private schAppService: SchAppService, private ActivatedRoute: ActivatedRoute,private router:Router,
     private applicationservice:ScholarshipapplicationService
     ) {
     // let btn = document.getElementById("approve");
@@ -25,6 +25,7 @@ export class InstituteStudentApplicationsComponent implements OnInit {
     console.log("message"+id)
     this.applicationservice.verifyapplication(id).subscribe((data:any)=>{
       console.log(data)
+      this.router.navigate(['/ApplicationForInstitute/',this.application.instituteId])
     })
   }
 
@@ -32,6 +33,7 @@ export class InstituteStudentApplicationsComponent implements OnInit {
     console.log("message"+id)
     this.applicationservice.declineapplication(id).subscribe((data:any)=>{
       console.log(data)
+      this.router.navigate(['/ApplicationForInstitute/',this.application.instituteId])
     })
   }
   ngOnInit(): void {

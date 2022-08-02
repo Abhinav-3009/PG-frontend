@@ -18,7 +18,8 @@ import { NodalLoginComponent } from './nodal-login/nodal-login.component';
 import { MinistryLoginComponent } from './ministry-login/ministry-login.component';
 import {NodalSchDetailsComponent} from './nodal-sch-details/nodal-sch-details.component';
 import { NodalInsDetailsComponent } from './nodal-ins-details/nodal-ins-details.component';
-
+import { MinistryInsDetailsComponent } from './ministry-ins-details/ministry-ins-details.component';
+import { MinistrySchDetailsComponent } from './ministry-sch-details/ministry-sch-details.component';
 
 const routes: Routes = [
   {path:'Home',component:HomeComponent},
@@ -39,6 +40,8 @@ const routes: Routes = [
   {path:'MinistryLogin',component:MinistryLoginComponent},
   {path:'NodalSchDetails/:id',component:NodalSchDetailsComponent},
   {path:'NodalInsDetails/:id',component:NodalInsDetailsComponent},
+  {path:'MinistryInsDetails/:id',component:MinistryInsDetailsComponent},
+  {path:'MinistrySchDetails/:id',component:MinistrySchDetailsComponent},
   {path: '', redirectTo: '/Home', pathMatch: 'full'}
 ];
 
