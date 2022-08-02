@@ -19,7 +19,7 @@ export class ScholarshipApplicationComponent implements OnInit {
   
   SchAppdata:SchApplication={
   StudentId:0,
-  InstituteId:3,
+  InstituteId:0,
   Religion:'',
     Community:'',
     Fathername:'',

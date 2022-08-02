@@ -1,6 +1,6 @@
 
 <div class="mainInstitutehome" >
-    <div class="container mrgn-rt" id="leftcomponent">
+    <!-- <div class="container mrgn-rt" id="leftcomponent">
         <div>
             <h2>Details of Institute {{institutedata.name}}</h2>
         <hr>
@@ -11,16 +11,21 @@
         </div><br>
         </div>
         
-    </div>
+    </div> -->
     <div id="rightcomponent" class="container">
         <div class="container" id="toprightcomponent">
             <h2>Details of Institute {{institutedata.name}}</h2>
             <hr>
             <div >
+                InstituteName : {{institutedata.name}}<br>
                 InstituteType : {{institutedata.instituteType}}<br>
+                InstituteCode : {{institutedata.institutecode}}<br>
                 State : {{institutedata.state}}<br>
+                City : {{institutedata.city}}<br>
+                PrincipalName : {{institutedata.principalName}}<br>
+
             </div><br>
-            <a [routerLink]="['/ApplicationForInstitute/',instituteid]" class="btn btn-primary">Show all Applications</a>
+            <a [routerLink]="['/ApplicationForInstitute/',instituteid]" class="btn btn-primary r1">Show all Student Applications</a>
         </div>
     </div>
     
