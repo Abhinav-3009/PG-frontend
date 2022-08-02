@@ -4,3 +4,12 @@
 .mrgn-rt{
     width: 50%;
 }
+.card{
+    border-width: 3px;
+    border-radius: 15px;
+    border-color: #000000;
+}
+
+.st{
+    padding-left: 20 px;
+}

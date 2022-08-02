@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { IStudent } from '../istudent'
+import { IStudentStatus } from '../istudent-status'
+
 import { StudentService } from '../Services/student.service'
 @Component({
   selector: 'app-student-home',
@@ -10,6 +12,13 @@ import { StudentService } from '../Services/student.service'
 export class StudentHomeComponent implements OnInit {
   studentdata:IStudent={name:'',dob:new Date(),gender:'',mobileNumber:'',email:'',instituteCode:0,aadhaar:'',accountNo:'',bankIFSC:'',bankName:'',password:''}
   studentid:number=0
+  statusdata:IStudentStatus={
+    approvalId:0,
+    applicationId:0,
+    approvedByInstitute:0,
+    approvedByNodalOfficer:0,
+    approvedByMinistry:0,
+  }
   constructor(private studentservice:StudentService,private activatedroute:ActivatedRoute) {
     
    }
@@ -18,7 +27,9 @@ export class StudentHomeComponent implements OnInit {
     const tid=this.activatedroute.snapshot.paramMap.get('id')
     this.studentid=Number(tid)
     this.studentservice.getStudent(this.studentid).subscribe((data:IStudent)=>{this.studentdata=data} )
-    this.studentservice.checkstatus(this.studentid).subscribe((data:any)=>{this.studentdata=data} )
+    this.studentservice.checkstatus(this.studentid).subscribe((data:any)=>{
+      console.log(data)
+      this.statusdata=data} )
 
   }
   
