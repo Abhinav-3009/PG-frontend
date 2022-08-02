@@ -43,7 +43,7 @@ export class StudentRegistrationComponent implements OnInit {
     this.studentservice.addStudent(this.studentregistrationform.value).subscribe((d)=>{
       console.log("service working")
       console.log(d)
-      alert("Student Registration Successfull, continue to log in page")
+      alert("Student Registration is Successful! Continue to Login Page")
       this.router.navigate(['/Home'])
     })
     

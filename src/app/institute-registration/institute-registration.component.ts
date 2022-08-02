@@ -41,7 +41,7 @@ export class InstituteRegistrationComponent implements OnInit {
     this.formSubmitted=true
     console.log(this.instituteregistrationform.value)
     this.instituteservice.addInstitute(this.instituteregistrationform.value).subscribe((d)=>{
-      alert("Registration Successfull")
+      alert("Registration Successful! Continue to Login Page")
       console.log("service working")
       console.log(d)
       this.router.navigate(['/Home'])

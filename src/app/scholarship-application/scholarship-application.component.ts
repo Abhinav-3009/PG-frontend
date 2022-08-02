@@ -74,7 +74,7 @@ export class ScholarshipApplicationComponent implements OnInit {
     this.formSubmitted=true
     console.log(this.applicationform.value)
     this.schappservice.addSchApplication(this.applicationform.value).subscribe((d)=>{
-      alert("Application has been sent for further verification")
+      alert("Application has been submitted and sent for further verification!")
       console.log("service working")
       console.log(d)
     })
