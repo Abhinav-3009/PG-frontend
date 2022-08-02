@@ -9,6 +9,13 @@ import { StudentService } from '../Services/student.service'
   templateUrl: './student-home.component.html',
   styleUrls: ['./student-home.component.css']
 })
+
+///<summary>
+//This component is for student home page . where student see his/her details and also the status of previous application
+// There is also the details of every scholarship available and also apply for a scholarship 
+
+
+
 export class StudentHomeComponent implements OnInit {
   studentdata:IStudent={name:'',dob:new Date(),gender:'',mobileNumber:'',email:'',instituteCode:0,aadhaar:'',accountNo:'',bankIFSC:'',bankName:'',password:''}
   studentid:number=0

@@ -7,6 +7,11 @@ import { of } from 'rxjs';
   templateUrl: './nodal-login.component.html',
   styleUrls: ['./nodal-login.component.css']
 })
+
+///<summary>
+//This component is for nodal officer login . Only if the nodal officer enters the correct details (id:nodal ,
+// password:nodal) , the login will work.
+
 export class NodalLoginComponent implements OnInit {
 
   nodalloginForm={} as FormGroup

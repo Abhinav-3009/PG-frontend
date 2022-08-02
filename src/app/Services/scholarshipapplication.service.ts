@@ -2,6 +2,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Iapplicatioforinstitute } from '../iapplicatioforinstitute';
+
+
+//Service to verify or ject schollarship by institute 
+
+
 @Injectable({
   providedIn: 'root'
 })

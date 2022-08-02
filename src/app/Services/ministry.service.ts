@@ -4,6 +4,11 @@ import { Observable } from 'rxjs';
 import { SchApplication } from '../sch-application';
 import { IInstitute } from '../iinstitute';
 
+
+// This service is used to provide services related to Ministry
+// it calls methods for approval or rejection of application or institute 
+
+
 @Injectable({
   providedIn: 'root'
 })

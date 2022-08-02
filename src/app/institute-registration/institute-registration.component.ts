@@ -17,6 +17,13 @@ import { InstituteService } from '../Services/institute.service';
   templateUrl: './institute-registration.component.html',
   styleUrls: ['./institute-registration.component.css']
 })
+
+///<summary>
+// This component is for institute registration page . institute can fill the details in the form provided 
+// and on submitting the form we will call the institute service through saveInstitute function and pass the data to
+// backend  
+
+
 export class InstituteRegistrationComponent implements OnInit {
   //@ts-ignorets-
   instituteregistrationform : FormGroup

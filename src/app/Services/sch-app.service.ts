@@ -4,6 +4,10 @@ import { Observable } from 'rxjs';
 import { SchApplication } from '../sch-application';
 import { IApplication } from '../iapplication';
 
+
+//Service to add or fetch scholarship applications from the backend
+
+
 @Injectable({
   providedIn: 'root'
 })

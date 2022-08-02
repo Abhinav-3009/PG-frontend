@@ -8,6 +8,12 @@ import { InstituteService } from '../Services/institute.service';
   templateUrl: './institute-home.component.html',
   styleUrls: ['./institute-home.component.css']
 })
+
+///<summary>
+//This component is for the institute home page . Important information about the institute and 
+//all the scholarship applications for that institute.
+
+
 export class InstituteHomeComponent implements OnInit {
   institutedata: IInstitute ={
     instituteId:0,

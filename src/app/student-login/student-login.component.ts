@@ -12,6 +12,9 @@ import {
   Validators,
 } from '@angular/forms';
 
+///<summary>
+//This component is to student login page . Student can fill adhaar id and password set at the time of registration to 
+// login .
 
 @Component({
   selector: 'app-student-login',

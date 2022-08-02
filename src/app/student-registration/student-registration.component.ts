@@ -17,6 +17,11 @@ import { StudentService } from '../Services/student.service';
   templateUrl: './student-registration.component.html',
   styleUrls: ['./student-registration.component.css']
 })
+
+///<summary>
+//This component is student registraion page where student is provided with a form to register himself by filling 
+//the necessary details. Through student service 
+
 export class StudentRegistrationComponent implements OnInit {
   //@ts-ignorets-
   studentregistrationform :FormGroup

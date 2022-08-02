@@ -5,6 +5,11 @@ import { SchApplication } from '../sch-application';
 import { IInstitute } from '../iinstitute';
 
 
+// This service is used to provide services related to Nodal Officer
+// it calls methods of related to application and institute approval
+// or rejection in the backend
+
+
 @Injectable({
   providedIn: 'root'
 })

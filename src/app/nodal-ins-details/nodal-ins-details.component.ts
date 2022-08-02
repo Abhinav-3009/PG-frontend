@@ -11,6 +11,9 @@ import { IInstitute } from '../iinstitute';
   templateUrl: './nodal-ins-details.component.html',
   styleUrls: ['./nodal-ins-details.component.css']
 })
+///<summary>
+//This component is to show details of institute to nodal officer  
+// Nodal officer can approve or reject the application.
 export class NodalInsDetailsComponent implements OnInit {
   application: IInstitute={
     instituteId:0,
