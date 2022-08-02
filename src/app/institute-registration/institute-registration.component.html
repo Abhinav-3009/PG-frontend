@@ -1,5 +1,5 @@
 <br />
-<h1>INSTITUTE REGISTRATION FORM</h1>
+<h1 class="text-center">INSTITUTE REGISTRATION FORM</h1>
 <hr />
 <div class="card" style="margin: auto 100px 50px">
   <form
@@ -60,10 +60,11 @@
       </div>
     </div>
     <br />
-    <div class="form-group form-check-inline">
-      <label for="location">Location:</label>
-      <div class="r1">
+    <div class="form-group form-check form-check-inline">
+      <label class="col-12 col-form-label row" for="location">Location:</label>
+      <div class="offset-8 col-12">
         <input
+          class="form-check-input"
           id="Urban"
           type="radio"
           value="Urban"
@@ -72,8 +73,9 @@
         <label for="Urban">Urban</label>
       </div>
 
-      <div class="r2">
+      <div class="col-12">
         <input
+          class="form-check-input"
           id="Rural"
           type="radio"
           value="Rural"
@@ -206,7 +208,7 @@
       <div class="col-6">
         <textarea
           id="Address"
-          placeholder="Complete Address"
+          placeholder="Enter Complete Address"
           type="text"
           class="form-control"
           formControlName="address"
@@ -272,7 +274,7 @@
       <div class="col-4">
         <input
           id="PrincipalName"
-          placeholder="Enter your Principal Name"
+          placeholder="Enter Principal Name"
           type="text"
           class="form-control"
           formControlName="principalName"
@@ -286,14 +288,14 @@
       <div class="col-4">
         <input
           id="PrincipalNumber"
-          placeholder="Enter your Principal Number"
+          placeholder="Enter Principal Mobile Number"
           type="text"
           class="form-control"
           formControlName="principalNumber"
         />
       </div>
     </div>
-
+    <br />
     <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1" />
       <label class="form-check-label" for="exampleCheck1">
@@ -302,7 +304,7 @@
         for that act by us.</label
       >
     </div>
-
+    <br />
     <div class="button-parent">
       <div class="child form-group row">
         <div class="offset-4 col-8">
