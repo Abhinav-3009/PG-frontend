@@ -1,15 +1,16 @@
-.mainstudenthome{
-    display: flex;
+.mainstudenthome {
+  display: flex;
+  font-family: Arial, sans-serif;
 }
-.mrgn-rt{
-    width: 50%;
+.mrgn-rt {
+  width: 50%;
 }
-.card{
-    border-width: 3px;
-    border-radius: 15px;
-    border-color: #000000;
+.card {
+  border-width: 3px;
+  border-radius: 15px;
+  border-color: #0b0033;
 }
 
-.st{
-    padding-left: 20 px;
+.st {
+  padding-left: 20 px;
 }
