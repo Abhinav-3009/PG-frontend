@@ -1,220 +1,322 @@
-<h1>INSTITUTE REGISTRATION REQUEST FORM</h1>
-<hr>
-<form class="container r5" [formGroup]="instituteregistrationform" (ngSubmit)="saveInstitute()">
+<h1>INSTITUTE REGISTRATION FORM</h1>
+<hr />
+<div class="card" style="border-radius: 15px">
+  <form
+    class="container r5"
+    [formGroup]="instituteregistrationform"
+    (ngSubmit)="saveInstitute()"
+  >
     <div class="form-group row">
-        <label for="InstituteCategory" class="col-4 col-form-label">InstituteCategory</label>
-        <div class="col-8">
-            <input id="InstituteCategory"  placeholder="Government or Private" type="text"
-                class="form-control" formControlName="instituteCategory">
-        </div>
+      <label for="InstituteCategory" class="col-4 col-form-label"
+        >Institute Category:</label
+      >
+      <div class="col-3">
+        <input
+          id="InstituteCategory"
+          placeholder="Government or Private"
+          type="text"
+          class="form-control"
+          formControlName="instituteCategory"
+        />
+      </div>
     </div>
     <div class="form-group row">
-        <label for="Name" class="col-4 col-form-label">Name</label>
-        <div class="col-8">
-            <input id="Name" placeholder="Elon Musk" type="text" class="form-control"
-                formControlName="name">
-        </div>
+      <label for="Name" class="col-4 col-form-label">Name:</label>
+      <div class="col-8">
+        <input
+          id="Name"
+          placeholder="Enter Institute Name"
+          type="text"
+          class="form-control"
+          formControlName="name"
+        />
+      </div>
     </div>
     <div class="form-group row">
-        <label for="Institutecode" class="col-4 col-form-label">Institutecode</label>
-        <div class="col-8">
-            <input id="Institutecode" placeholder="1234" type="number" class="form-control"
-                formControlName="institutecode">
-        </div>
+      <label for="Institutecode" class="col-4 col-form-label"
+        >Institute Code:</label
+      >
+      <div class="col-2">
+        <input
+          id="Institutecode"
+          placeholder="1234"
+          type="number"
+          class="form-control"
+          formControlName="institutecode"
+        />
+      </div>
     </div>
     <div class="form-group row">
-        <label for="Disecode" class="col-4 col-form-label">Disecode</label>
-        <div class="col-8">
-            <input id="Disecode" placeholder="1234" type="number" class="form-control"
-                formControlName="disecode">
-        </div>
+      <label for="Disecode" class="col-4 col-form-label">DISE Code:</label>
+      <div class="col-2">
+        <input
+          id="Disecode"
+          placeholder="1234"
+          type="number"
+          class="form-control"
+          formControlName="disecode"
+        />
+      </div>
     </div>
-    <br>
-    <div class="form-group row r3">
-        <label for="gender">Location:</label>
-        <div class="r1">
-            <input id="Urban" type="radio" value="Urban"  formControlName="location">
-            <label for="Urban">Urban</label>
-        </div>
+    <br />
+    <div class="form-group form-check-inline">
+      <label for="location">Location:</label>
+      <div class="r1">
+        <input
+          id="Urban"
+          type="radio"
+          value="Urban"
+          formControlName="location"
+        />
+        <label for="Urban">Urban</label>
+      </div>
 
-        <div class="r2">
-            <input id="Rural" type="radio" value="Rural"  formControlName="location">
-            <label for="Rural">Rural</label>
-        </div>
-
-    </div>
-
-    <div class="form-group row">
-        <label for="InstituteType" class="col-4 col-form-label">InstituteType</label>
-        <div class="col-8">
-            <input id="InstituteType"  placeholder="College/ School/ University" type="text"
-                class="form-control" formControlName="instituteType">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="AffiliatedState" class="col-4 col-form-label">AffiliatedState</label>
-        <div class="col-8">
-            <input id="AffiliatedState"  placeholder="Maharashtra" type="text"
-                class="form-control" formControlName="affiliatedState">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="AffiliatedName" class="col-4 col-form-label">AffiliatedName</label>
-        <div class="col-8">
-            <input id="AffiliatedName"  placeholder="Name of University" type="text"
-                class="form-control" formControlName="affiliatedName">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="AdmissionStartYear" class="col-4 col-form-label">AdmissionStartYear</label>
-        <div class="col-8">
-            <input id="AdmissionStartYear"  placeholder="2000" type="text"
-                class="form-control" formControlName="admissionStartYear">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="Password" class="col-4 col-form-label">Password</label>
-        <div class="col-8">
-            <input id="Password"  placeholder="123@12" type="text" class="form-control"
-                formControlName="password">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ConfirmPassword" class="col-4 col-form-label">Confirm Password</label>
-        <div class="col-8">
-            <input id="ConfirmPassword"  placeholder="**********" type="text" class="form-control"
-                required>
-        </div>
-    </div><hr>
-
-    <div class="form-group row">
-        <label for="ProofofExistence" class="col-4 col-form-label">
-            <h4>Proof of Existance of Institute:</h4>
-            <br>
-            Institute Establishment/Registration Certificate No.
-        </label>
-        <div class="col-8">
-            <input id="ProofofExistence"  placeholder="ACNRFO1234" type="text"
-                class="form-control" required>
-        </div>
-    </div>
-    <hr>
-    <div class="form-group row">
-        <label for="AffiliatedTo" class="col-4 col-form-label">
-            <h4>Affiliated To:</h4>
-            <br>
-            Unviersity/Board Affiliation Certificate Number
-        </label>
-        <div class="col-8">
-            <input id="AffiliatedTo" placeholder="AJJBF1234" type="text" class="form-control"
-                required>
-        </div>
-    </div>
-    <hr>
-    <div class="form-group row">
-        <label for="Address" class="col-4 col-form-label">Address</label>
-        <div class="col-8">
-            <input id="Address"  placeholder="complete address" type="text" class="form-control"
-                formControlName="address">
-        </div>
+      <div class="r2">
+        <input
+          id="Rural"
+          type="radio"
+          value="Rural"
+          formControlName="location"
+        />
+        <label for="Rural">Rural</label>
+      </div>
     </div>
 
     <div class="form-group row">
-        <label for="City" class="col-4 col-form-label">City</label>
-        <div class="col-8">
-                
-                <input id="City"  placeholder="Mumbai" type="text" class="form-control" formControlName="city">
+      <label for="InstituteType" class="col-4 col-form-label"
+        >Institute Type:</label
+      >
+      <div class="col-6">
+        <input
+          id="InstituteType"
+          placeholder="College/ School/ University"
+          type="text"
+          class="form-control"
+          formControlName="instituteType"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="AffiliatedState" class="col-4 col-form-label"
+        >Affiliated State:</label
+      >
+      <div class="col-6">
+        <input
+          id="AffiliatedState"
+          placeholder="Enter the Affiliated State"
+          type="text"
+          class="form-control"
+          formControlName="affiliatedState"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="AffiliatedName" class="col-4 col-form-label"
+        >Affiliated Name:</label
+      >
+      <div class="col-8">
+        <input
+          id="AffiliatedName"
+          placeholder="Name of University"
+          type="text"
+          class="form-control"
+          formControlName="affiliatedName"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="AdmissionStartYear" class="col-4 col-form-label"
+        >Admission Start Year:</label
+      >
+      <div class="col-2">
+        <input
+          id="AdmissionStartYear"
+          placeholder="XXXX"
+          type="text"
+          class="form-control"
+          formControlName="admissionStartYear"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Password" class="col-4 col-form-label">Password:</label>
+      <div class="col-6">
+        <input
+          id="Password"
+          placeholder="**********"
+          type="text"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="ConfirmPassword" class="col-4 col-form-label"
+        >Confirm Password</label
+      >
+      <div class="col-6">
+        <input
+          id="ConfirmPassword"
+          placeholder="**********"
+          type="text"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <hr />
+
+    <div class="form-group row">
+      <label for="ProofofExistence" class="col-4 col-form-label">
+        <h4>Proof of Existance of Institute:</h4>
+        <br />
+      </label>
+      <div class="col-8">
+        <input
+          class="form-control form-control-md"
+          id="formFileLg"
+          type="file"
+        />
+        <div class="small text-muted mt-2">
+          PDF of Institute Establishment/Registration Certificate
         </div>
+      </div>
+    </div>
+    <hr />
+    <div class="form-group row">
+      <label for="AffiliatedTo" class="col-4 col-form-label">
+        <h4>Affiliated To:</h4>
+        <br />
+      </label>
+      <div class="col-8">
+        <input
+          class="form-control form-control-md"
+          id="formFileLg"
+          type="file"
+        />
+        <div class="small text-muted mt-2">
+          PDF of Unviersity/Board Affiliation Certificate
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="form-group row">
+      <label for="Address" class="col-4 col-form-label">Address:</label>
+      <div class="col-6">
+        <textarea
+          id="Address"
+          placeholder="Complete Address"
+          type="text"
+          class="form-control"
+          formControlName="address"
+          rows="4"
+        >
+        </textarea>
+      </div>
     </div>
 
     <div class="form-group row">
-        <label for="State" class="col-4 col-form-label">State</label>
-        <div class="col-8">
-            <input id="State"  placeholder="Maharashtra" type="text" class="form-control"
-                formControlName="state">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="District" class="col-4 col-form-label">District</label>
-        <div class="col-8">
-                <input id="District"  placeholder="Disctrict" type="text" class="form-control" formControlName="district">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="Pincode" class="col-4 col-form-label">Pincode</label>
-        <div class="col-8">
-            <input id="Pincode" placeholder="Pincode" type="number" class="form-control" formControlName="pincode">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="PrincipalName" class="col-4 col-form-label">PrincipalName</label>
-        <div class="col-8">
-            <input id="PrincipalName"  placeholder="PrincipalName" type="text" class="form-control"
-                formControlName="principalName">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="PrincipalNumber" class="col-4 col-form-label">PrincipalNumber</label>
-        <div class="col-8">
-            <input id="PrincipalNumber"  placeholder="PrincipalNumber" type="text"
-                class="form-control" formControlName="principalNumber">
-        </div>
+      <label for="City" class="col-4 col-form-label">City:</label>
+      <div class="col-6">
+        <input
+          id="City"
+          placeholder="Enter the City"
+          type="text"
+          class="form-control"
+          formControlName="city"
+        />
+      </div>
     </div>
 
-
+    <div class="form-group row">
+      <label for="State" class="col-4 col-form-label">State:</label>
+      <div class="col-6">
+        <input
+          id="State"
+          placeholder="Enter the State"
+          type="text"
+          class="form-control"
+          formControlName="state"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="District" class="col-4 col-form-label">District:</label>
+      <div class="col-6">
+        <input
+          id="District"
+          placeholder="Enter the District"
+          type="text"
+          class="form-control"
+          formControlName="district"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Pincode" class="col-4 col-form-label">Pincode:</label>
+      <div class="col-2">
+        <input
+          id="Pincode"
+          placeholder="Pincode"
+          type="number"
+          class="form-control"
+          formControlName="pincode"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="PrincipalName" class="col-4 col-form-label"
+        >Principal Name:</label
+      >
+      <div class="col-4">
+        <input
+          id="PrincipalName"
+          placeholder="Enter your Principal Name"
+          type="text"
+          class="form-control"
+          formControlName="principalName"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="PrincipalNumber" class="col-4 col-form-label"
+        >Principal Number:</label
+      >
+      <div class="col-4">
+        <input
+          id="PrincipalNumber"
+          placeholder="Enter your Principal Number"
+          type="text"
+          class="form-control"
+          formControlName="principalNumber"
+        />
+      </div>
+    </div>
 
     <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1"> All the details and documents submitted by us are valid and
-            true. If found guilty of submitting invalid documents we may be held responsible for that act by us.</label>
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">
+        All the details and documents submitted by us are valid and true. If
+        found guilty of submitting invalid documents we may be held responsible
+        for that act by us.</label
+      >
     </div>
 
     <div class="button-parent">
-        <div class="child form-group row">
-            <div class="offset-4 col-8">
-                <button  type="submit" class="btn btn-primary">Register</button>
-            </div>
+      <div class="child form-group row">
+        <div class="offset-4 col-8">
+          <button type="submit" class="btn btn-primary">Register</button>
         </div>
+      </div>
 
-        <div class="child form-group row">
-            <div class="offset-4 col-8">
-                <button  type="reset" class="btn btn-primary">Reset</button>
-            </div>
+      <div class="child form-group row">
+        <div class="offset-4 col-8">
+          <button type="reset" class="btn btn-primary">Reset</button>
         </div>
-
+      </div>
     </div>
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </form>
+</div>
 
 <!-- <form id="rendered-form" class="container" [formGroup]="instituteRegisterForm">
   <div class="rendered-form">

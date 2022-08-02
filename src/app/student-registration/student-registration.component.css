@@ -1,16 +1,25 @@
-.mgrt{
-    margin-right: 10px;
+.mgrt {
+  margin-right: 10px;
 }
 
-.button-parent{
-    display: flex;
-    
+.button-parent {
+  display: flex;
 }
 
-.child{
-    flex:1;
+.child {
+  flex: 1;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
 }
